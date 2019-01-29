@@ -56,7 +56,8 @@
 
 								<ul class="list-unstyled list-socials">
 									<li>
-										<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+										<a href="https://www.facebook.com/EscolaDeEnfermagemCicloVittal" target="_blank">
+										<i class="fab fa-facebook-f"></i></a>
 									</li>
 									<li>
 										<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>

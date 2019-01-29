@@ -206,13 +206,13 @@ $app->get('/admin/galeria', function() {
 
 	User::verifyLogin();
 
-	$users = User::listAll();
+	$fotos = Galeria::listFotosGaleria();
 	    
 	$page = new CicloVittal\PageAdmin();
 
 	$page->setTpl("galeria", array(
 
-		"users"=>$users
+		"fotos"=>$fotos
 	));
 });
 
