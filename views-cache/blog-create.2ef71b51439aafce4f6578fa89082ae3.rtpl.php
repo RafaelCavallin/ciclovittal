@@ -47,6 +47,7 @@
           <!-- /.box-body -->
           <div class="box-footer">
             <button type="submit" class="btn btn-success">Cadastrar</button>
+            <a href="/admin/blog" class="btn btn-danger">Cancelar</a>
           </div>
         </form>
       </div>

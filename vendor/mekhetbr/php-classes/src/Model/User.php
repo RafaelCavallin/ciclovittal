@@ -89,7 +89,7 @@ class User extends Model {
 		$results = $sql->select("CALL sp_users_save(:desperson, :deslogin, :despassword, :desemail, :inadmin)", array(
 			":desperson"=>$this->getdesperson(),
 			":deslogin"=>$this->getdeslogin(),
-			":despassword"=>User::getPasswordHash($this->getdespassword()),
+			":despassword"=>$this->getdespassword(),
 			":desemail"=>$this->getdesemail(),
 			":inadmin"=>$this->getinadmin()
 		));
@@ -108,7 +108,7 @@ class User extends Model {
 
 		$data = $results[0];
 
-		$data['desperson'] = utf8_encode($data['desperson']);
+		/*$data['desperson'] = utf8_encode($data['desperson']);*/
 
 
 		$this->setData($data);

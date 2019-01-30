@@ -36,7 +36,7 @@ class Blog extends Model {
 		$sql = new Sql();
 
 		$results = $sql->select("CALL sp_blog_save(:title, :body, :picture, :preview)", array(
-			":title"=>$this->getdesperson(),
+			":title"=>$this->gettitle(),
 			":body"=>$this->getbody(),
 			":picture"=>$this->getpicture(),
 			":preview"=>$this->getpreview()
