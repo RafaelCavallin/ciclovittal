@@ -19,15 +19,18 @@ $app->config('debug', true);
 	$app->get('/', function() {
 
 		$articles = Blog::listBlogSite();
-
 		$fotos = Galeria::listFotos();
+		$fotos2 = Galeria::listFotos2();
+		$fotos3 = Galeria::listFotos3();
 	    
 		$page = new CicloVittal\Page();
 
 		$page->setTpl("index", array(
 
 			"articles"=>$articles,
-			"fotos"=>$fotos
+			"fotos"=>$fotos,
+			"fotos2"=>$fotos2,
+			"fotos3"=>$fotos3
 
 		));
 });
@@ -191,6 +194,21 @@ $app->get('/admin/blog', function(){
 	));	
 });
 
+//ROTA DELETE BLOG
+$app->get('/admin/blog/:idpost/delete', function($idpost){
+
+	User::verifyLogin();
+
+	$blog = new Blog();
+
+	$blog->get((int)$idpost);
+
+	$blog->delete();
+
+	header("Location: /admin/blog");
+	exit;
+});
+
 //ROTA TELA DE CREATE BLOG
 $app->get('/admin/blog/create', function(){
 
@@ -200,6 +218,58 @@ $app->get('/admin/blog/create', function(){
 
 	$page->setTpl("blog-create");	
 });
+
+//ROTA TELA DE UPDATE BLOG
+$app->get('/admin/blog/:idpost', function($idpost){
+
+	User::verifyLogin();
+
+	$blog = new Blog();
+
+	$blog->get((int)$idpost);
+
+	$page = new CicloVittal\PageAdmin();
+
+	$page->setTpl("blog-update", array(
+		"blog"=>$blog->getValues()
+	));	
+});
+
+//ROTA SAVE CREATE BLOG
+$app->post('/admin/blog/create', function(){
+
+	User::verifyLogin();
+
+	$blog = new Blog();
+
+ 	$blog->setData($_POST);
+
+	$blog->save();
+
+	header("Location: /admin/blog");
+ 	exit;
+});
+
+//ROTA SAVE UPDATE BLOG
+$app->post('/admin/blog/:idpost', function($idpost){
+
+	User::verifyLogin();
+
+	$blog = new Blog();
+
+	$blog->get((int)$idpost);
+
+	$blog->setData($_POST);
+
+	$blog->update($idpost);
+
+	header("Location: /admin/blog");
+	exit;
+});
+
+
+
+
 
 //ROTA DA TELA GALERIA
 $app->get('/admin/galeria', function() {
@@ -215,6 +285,8 @@ $app->get('/admin/galeria', function() {
 		"fotos"=>$fotos
 	));
 });
+
+
 
 $app->run();
 

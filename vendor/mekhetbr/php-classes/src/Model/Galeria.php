@@ -19,7 +19,23 @@ class Galeria extends Model {
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_fotos ORDER BY id DESC LIMIT 1");
+		return $sql->select("SELECT * FROM tb_fotos ORDER BY RAND() DESC LIMIT 3");
+	}
+
+	public static function listFotos2()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_fotos ORDER BY RAND() DESC LIMIT 3");
+	}
+
+	public static function listFotos3()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_fotos ORDER BY RAND() DESC LIMIT 3");
 	}
 
 	public static function listFotosGaleria()

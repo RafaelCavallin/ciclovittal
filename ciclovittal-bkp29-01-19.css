@@ -414,16 +414,6 @@ header #logotipo {
     width: 710px;
     height: 180px;
 }
-
-/* INÍCIO SIDEBAR */
-#blog #sidebar {
-	position: relative;
-    right: -770px;
-    top: -942px;
-}
-#blog #sidebar .widget {
-	margin-left: 15px;
-}
 #blog #sidebar .widget h4.widget__title {
     width: 230px;
     height: 26px;
@@ -435,31 +425,27 @@ header #logotipo {
 	border-radius: 100px;
 	background-color: #36648B;
 }
-
+#blog #sidebar {
+	position: relative;
+    right: -793px;
+    top: -942px;
+}
 #blog #sidebar .galeria-camera {
 	top: -50px;
     left: 235px;
     position: relative;
     color: #36648B;
     margin-bottom: -40px;
-    margin-left: 20px;
 }
 #blog #sidebar .container {
+	margin-left: -25px;
+}
+#blog #sidebar .container .col-md-4 {
 	display: inline-flex;
-	margin-left: 0;
 }
-#blog #sidebar img.img-fluid {
-	height: 100px;
-    width: 100px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-#blog #sidebar #foto_onclick.container.foto_gallery.col-md-4 {
-    left: 1px;
-    margin-top: 0;
-}
-#blog #sidebar #foto_onclick img {
-	width: 328px;
+#blog #sidebar a {
+	padding-left: 10px;
+	padding-bottom: 10px;
 }
 #blog #sidebar a.read_more:hover {
 	background: #36648B;
@@ -483,6 +469,14 @@ header #logotipo {
     color: #fff;
     transition: all 0.2s linear;
     border-radius: 100px;
+}
+#blog #sidebar #foto_onclick a img {
+	width: 340px;
+	height: 230px;
+}
+#blog #sidebar img.img-fluid {
+	height: 90px;
+    width: 300px;
 }
 footer {
 

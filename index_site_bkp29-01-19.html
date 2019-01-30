@@ -1,4 +1,4 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><section>
+<section>
 	
 	<div id="banner">
 
@@ -155,8 +155,6 @@
 
 </section>
 
-<!-- INÍCIO SECTION BLOG E SIDEBAR -->
-
 <section class="container" id="blog">
 
 	<div class="row text-center">
@@ -167,14 +165,14 @@
 	<div class="content">
 		<div id="posts">
 			<div class="posts__item clearfix col-md-8">
-				<?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
-				<img src="/res/site/images/<?php echo htmlspecialchars( $value1["picture"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="<?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" title="<?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
-				<h3><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
-				<p><?php echo htmlspecialchars( $value1["preview"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+				{loop="$articles"}
+				<img src="/res/site/images/{$value.picture}" class="img-fluid" alt="{$value.title}" title="{$value.title}">
+				<h3>{$value.title}</h3>
+				<p>{$value.preview}</p>
 
-				<p>Criado em: <?php echo formatDate($value1["created"]); ?></p>
+				<p>Criado em: {function="formatDate($value.created)"}</p>
 				<a href="#" class="read_more">Continue lendo &raquo;</a>
-				<?php } ?>
+				{/loop}
 			</div>
 		</div>
 	</div> <!-- FIM DO BLOG -->
@@ -182,75 +180,85 @@
 	<!-- INÍCIO DA SIDEBAR FOTOS -->
 
 	<div id="sidebar">
-
 		<div class="widget">
 			<h4 class="widget__title">
-				Galeria de Fotos
+				<span></span> Galeria de Fotos
+				<div id="linha_widget"></div>
 			</h4>
-		</div>
-		
-		<div class="galeria-camera">
+			<div class="galeria-camera"><i class="fa fa-camera" style="font-size: 40px "></i></div>
+			<div class="container linhaVerticalBlue">
+				<span></span>
+			</div>
 
-			<i class="fa fa-camera" style="font-size: 40px "></i>
-		</div>
-
-		<!-- INÍCIO GALERIA -->
-
-		<div class="container">
-
-			<table>
-
-				<tbody>
+			<div class="container">
+				{loop="$fotos"}
+				<div class="row">
 					
-				<tr>
-	
-					<td>
-						<?php $counter1=-1;  if( isset($fotos) && ( is_array($fotos) || $fotos instanceof Traversable ) && sizeof($fotos) ) foreach( $fotos as $key1 => $value1 ){ $counter1++; ?>
-						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						<?php } ?>
-					</td>
-				
-				</tr>
+					<div class="col-md-4">
+						<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
 
-				<tr>
-			
-					<td>
-						<?php $counter1=-1;  if( isset($fotos2) && ( is_array($fotos2) || $fotos2 instanceof Traversable ) && sizeof($fotos2) ) foreach( $fotos2 as $key1 => $value1 ){ $counter1++; ?>
-						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						<?php } ?>
-					</td>
-				
-				</tr> 
+				    	<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
 
-				<tr>
-				
-					<td>
-						<?php $counter1=-1;  if( isset($fotos3) && ( is_array($fotos3) || $fotos3 instanceof Traversable ) && sizeof($fotos3) ) foreach( $fotos3 as $key1 => $value1 ){ $counter1++; ?>
-						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						<?php } ?>
-					</td>
-				
-				</tr>
-				
-				</tbody>
+				    	<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
+				    
+					</div>
 
-			</table>
+				</div>
 
-		</div>
+				<div class="row">
+					
+					<div class="col-md-4">
+						<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
 
-		<!-- FIM GALERIA -->
+				    	<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
 
-		<div class=" container foto_gallery col-md-4" id="foto_onclick">
-			<a href="#">
-				<?php $counter1=-1;  if( isset($foto) && ( is_array($foto) || $foto instanceof Traversable ) && sizeof($foto) ) foreach( $foto as $key1 => $value1 ){ $counter1++; ?>
-				<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
-				<?php } ?>
-			</a>
-		</div>
+				    	<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
+					</div>
+					
+				</div>
 
-		<div><a href="#" class="read_more">Veja mais fotos &raquo;</a></div>	
+				<div class="row">
+					
+					<div class="col-md-4">
+						<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
+
+				    	<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
+
+				    	<a href="#">
+				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+				    	</a>
+					</div>
+
+				</div>
+			{/loop}	
+			</div>
+
+			<div class=" container foto_gallery col-md-4" id="foto_onclick">
+				<a href="#">
+					<img src="/res/site/images/galeria/02.jpg" alt="">
+				</a>
+			</div>
+
+			<div><a href="#" class="read_more">Veja mais fotos &raquo;</a></div>
+
+		</div>	
 
 	</div> <!-- FIM SIDEBAR FOTOS -->
-
 </section>
 	

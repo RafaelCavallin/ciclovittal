@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
     <li><a href="/admin/blog">Blog</a></li>
-    <li class="active"><a href="/admin/blog/create">Cadastrar</a></li>
+    <li class="active"><a href="#">Editar</a></li>
   </ol>
 </section>
 
@@ -19,24 +19,24 @@
     <div class="col-md-12">
       <div class="box box-success">
         <div class="box-header with-border">
-          <h3 class="box-title">Nova postagem</h3>
+          <h3 class="box-title">Editar postagem</h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/admin/blog/create" method="post">
+        <form role="form" action="/admin/blog/<?php echo htmlspecialchars( $blog["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post">
           <div class="box-body">
             <div class="form-group">
               <label for="title">Título</label>
-              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" value="<?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="preview">Preview</label>
-              <input type="text" class="form-control" id="preview" name="preview" placeholder="Digite o preview">
+              <input type="text" class="form-control" id="preview" name="preview" placeholder="Digite o preview" value="<?php echo htmlspecialchars( $blog["preview"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
                   <label for="body">Texto</label>
-                  <textarea style="resize: none" class="form-control" rows="7" id="body" name="body" placeholder="Digite o texto"></textarea>
-                </div>
+                  <textarea style="resize: none" class="form-control" rows="7" id="body" name="body" placeholder="Digite o texto"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?></textarea>
+            </div>
             <div class="form-group">
                   <label for="picture">Imagem</label>
                   <input type="file" id="picture" name="picture">
@@ -46,7 +46,8 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button type="submit" class="btn btn-success">Cadastrar</button>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a href="/admin/blog" class="btn btn-danger">Cancelar</a>
           </div>
         </form>
       </div>

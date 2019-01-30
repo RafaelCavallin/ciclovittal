@@ -5,6 +5,11 @@
   <h1>
     Lista de Usuários
   </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/admin/blog">Usuários</a></li>
+    <li class="active"><a href="#">Editar</a></li>
+  </ol>
 </section>
 
 <!-- Main content -->
@@ -45,6 +50,7 @@
           <!-- /.box-body -->
           <div class="box-footer">
             <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="/admin/users" class="btn btn-danger">Cancelar</a>
           </div>
         </form>
       </div>

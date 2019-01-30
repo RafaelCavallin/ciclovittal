@@ -155,6 +155,8 @@
 
 </section>
 
+<!-- INÍCIO SECTION BLOG E SIDEBAR -->
+
 <section class="container" id="blog">
 
 	<div class="row text-center">
@@ -180,85 +182,75 @@
 	<!-- INÍCIO DA SIDEBAR FOTOS -->
 
 	<div id="sidebar">
+
 		<div class="widget">
 			<h4 class="widget__title">
-				<span></span> Galeria de Fotos
-				<div id="linha_widget"></div>
+				Galeria de Fotos
 			</h4>
-			<div class="galeria-camera"><i class="fa fa-camera" style="font-size: 40px "></i></div>
-			<div class="container linhaVerticalBlue">
-				<span></span>
-			</div>
+		</div>
+		
+		<div class="galeria-camera">
 
-			<div class="container">
-				{loop="$fotos"}
-				<div class="row">
+			<i class="fa fa-camera" style="font-size: 40px "></i>
+		</div>
+
+		<!-- INÍCIO GALERIA -->
+
+		<div class="container">
+
+			<table>
+
+				<tbody>
 					
-					<div class="col-md-4">
-						<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
+				<tr>
+	
+					<td>
+						{loop="$fotos"}
+						<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+						{/loop}
+					</td>
+				
+				</tr>
 
-				    	<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
+				<tr>
+			
+					<td>
+						{loop="$fotos2"}
+						<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+						{/loop}
+					</td>
+				
+				</tr> 
 
-				    	<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
-				    
-					</div>
+				<tr>
+				
+					<td>
+						{loop="$fotos3"}
+						<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+						{/loop}
+					</td>
+				
+				</tr>
+				
+				</tbody>
 
-				</div>
+			</table>
 
-				<div class="row">
-					
-					<div class="col-md-4">
-						<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
+		</div>
 
-				    	<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
+		<!-- FIM GALERIA -->
 
-				    	<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
-					</div>
-					
-				</div>
+		<div class=" container foto_gallery col-md-4" id="foto_onclick">
+			<a href="#">
+				{loop="$foto"}
+				<img src="/res/site/images/galeria/{$value.foto}" alt="">
+				{/loop}
+			</a>
+		</div>
 
-				<div class="row">
-					
-					<div class="col-md-4">
-						<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
-
-				    	<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
-
-				    	<a href="#">
-				    		<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-				    	</a>
-					</div>
-
-				</div>
-			{/loop}	
-			</div>
-
-			<div class=" container foto_gallery col-md-4" id="foto_onclick">
-				<a href="#">
-					<img src="/res/site/images/galeria/02.jpg" alt="">
-				</a>
-			</div>
-
-			<div><a href="#" class="read_more">Veja mais fotos &raquo;</a></div>
-
-		</div>	
+		<div><a href="#" class="read_more">Veja mais fotos &raquo;</a></div>	
 
 	</div> <!-- FIM SIDEBAR FOTOS -->
+
 </section>
 	
