@@ -134,7 +134,7 @@ $app->get('/admin/users/:iduser', function($iduser){
 
 	$page->setTpl("users-update", array(
 		"user"=>$user->getValues()
-	));	
+	));
 });
 
 //ROTA SAVE CREATE USER

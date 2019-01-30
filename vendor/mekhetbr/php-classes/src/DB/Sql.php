@@ -17,9 +17,11 @@ class Sql {
 		$this->conn = new \PDO(
 			"mysql:dbname=".Sql::DBNAME.";host=".Sql::HOSTNAME.";charset=utf8", 
 			Sql::USERNAME,
-			Sql::PASSWORD,
+			Sql::PASSWORD
 		);
 
+		/*$this->conn = new \PDO("mysql:host=localhost; dbname=db_ciclovittal", "root", "");*/
+    	$this->conn->exec("set names utf8");
 	}
 
 	private function setParams($statement, $parameters = array())

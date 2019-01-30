@@ -36,10 +36,10 @@ class Blog extends Model {
 		$sql = new Sql();
 
 		$results = $sql->select("CALL sp_blog_save(:title, :body, :picture, :preview)", array(
-			":title"=>utf8_decode($this->getdesperson()),
-			":body"=>utf8_decode($this->getbody()),
+			":title"=>$this->getdesperson(),
+			":body"=>$this->getbody(),
 			":picture"=>$this->getpicture(),
-			":preview"=>utf8_decode($this->getpreview())
+			":preview"=>$this->getpreview()
 		));
 
 		$this->setData($results[0]);
@@ -69,10 +69,10 @@ class Blog extends Model {
 
 		$results = $sql->select("CALL sp_blogupdate_save(:idpost, :title, :body, :picture, :preview)", array(
 			":idpost"=>$this->getidpost(),
-			":title"=>utf8_decode($this->gettitle()),
-			":body"=>utf8_decode($this->getbody()),
+			":title"=>$this->gettitle(),
+			":body"=>$this->getbody(),
 			":picture"=>$this->getpicture(),
-			":preview"=>utf8_decode($this->getpreview())
+			":preview"=>$this->getpreview()
 		));
 
 		$this->setData($results[0]);		
