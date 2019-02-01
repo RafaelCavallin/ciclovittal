@@ -19,7 +19,7 @@
       <div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/blog/create" class="btn btn-success">Adicionar Foto</a>
+              <a href="/admin/galeria/create" class="btn btn-success">Adicionar Foto</a>
             </div>
 
             <div class="box-body no-padding">
@@ -38,8 +38,8 @@
                     <td><img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="height: 100px; width: 100px"></td>
                     <td><?php echo formatDate($value1["datafoto"]); ?></td/>
                     <td>
-                      <a href="/admin/users/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/users/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
                   <?php } ?>
