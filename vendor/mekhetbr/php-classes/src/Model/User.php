@@ -8,6 +8,7 @@ use \CicloVittal\DB\Sql;
 class User extends Model {
 
 	const SESSION = "User";
+	const SECRET = "MekhetDesenvolvimento_Secret2019";
 
 	protected $fields = [
 		"iduser", "idperson", "deslogin", "despassword", "inadmin", "desemail",
@@ -140,6 +141,71 @@ class User extends Model {
 		$sql->query("CALL sp_users_delete(:iduser)", array(
 			":iduser"=>$this->getiduser()
 		));
+	}
+
+	public static function getForgot($email)
+	{
+
+		$sql = new Sql();
+
+		$results = $sql->select("
+			SELECT * 
+			FROM tb_persons a
+			INNER JOIN tb_users b USING (idperson)
+			WHERE a.desemail = :email", array(
+				":email"=>$email
+			));
+
+		if (count($results) === 0)
+		{
+			throw new \Exception("Não foi possível recuperar a senha!");
+			
+		}
+		else
+		{
+			$data = $results[0];
+
+			$results2 = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser, :desip)", array(
+				":iduser"=>$data["iduser"],
+				":desip"=>$_SERVER["REMOTE_ADDR"]
+			));
+
+			
+
+			if (count($results2) === 0)
+			{
+				throw new \Exception("Não foi possível recuperar a senha!");
+				
+			}
+			else
+			{
+				$dataRecovery = $results2[0];
+
+				$iv = random_bytes(openssl_cipher_iv_length('aes-256-cbc'));
+
+				$code = openssl_encrypt($dataRecovery['idrecovery'], 'aes-256-cbc', User::SECRET, 0, $iv);
+
+				$result = base64_encode($iv.$code);
+
+				if ($inadmin === true) {
+
+					$link = "http://www.ciclovittal.com.br/admin/forgot/reset?code=$result";
+
+				} else {
+
+					$link = "http://www.ciclovittal.com.br/forgot/reset?code=$result";
+
+				} 
+				
+				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir a senha", "forgot", array(
+					"name"=>$data['desperson'],
+					"link"=>$link
+				)); 
+				$mailer->send();
+				return $link;
+			}
+		}
+
 	}
 }
 

@@ -356,6 +356,35 @@ $app->post('/admin/galeria/:id', function($id){
 	exit;
 });
 
+//ROTA FORGOT SENHA
+$app->get('/admin/forgot', function(){
+
+	$page = new CicloVittal\PageAdmin([
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("forgot");
+});
+
+//ROTA FORGOT SENT
+$app->post('/admin/forgot', function(){
+
+	$user = User::getForgot($_POST["email"]);
+
+	header("Location: /admin/forgot/sent");
+	exit;
+});
+
+$app->get("/admin/forgot/sent", function(){
+
+	$page = new CicloVittal\PageAdmin([
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("forgot-sent");
+});
 
 
 $app->run();
