@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
     <li><a href="/admin/blog">Blog</a></li>
-    <li class="active"><a href="/admin/blog/create">Cadastrar</a></li>
+    <li class="active"><a href="/admin/blog/create">Nova postagem</a></li>
   </ol>
 </section>
 

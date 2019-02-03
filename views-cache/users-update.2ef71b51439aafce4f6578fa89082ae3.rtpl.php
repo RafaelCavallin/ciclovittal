@@ -8,7 +8,7 @@
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
     <li><a href="/admin/blog">Usuários</a></li>
-    <li class="active"><a href="#">Editar</a></li>
+    <li class="active"><a href="#">Editar usuário</a></li>
   </ol>
 </section>
 
