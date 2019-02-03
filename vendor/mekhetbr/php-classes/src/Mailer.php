@@ -7,7 +7,7 @@ use Rain\Tpl;
 class Mailer {
 
 	const USERNAME = "mekhetdesenvolvimento@gmail.com";
-	const PASSWORD = "";
+	const PASSWORD = "soc789456123";
 	const NAME_FROM = "Mekhet Desenvolvimento";
 
 	private $mail;
@@ -48,6 +48,8 @@ class Mailer {
 		// 1 = client messages
 		// 2 = client and server messages
 		$this->mail->SMTPDebug = 0;
+
+		$this->Debugoutput = 'html';
 
 		//Set the hostname of the mail server
 		$this->mail->Host = 'smtp.gmail.com';

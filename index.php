@@ -356,7 +356,7 @@ $app->post('/admin/galeria/:id', function($id){
 	exit;
 });
 
-//ROTA FORGOT SENHA
+//ROTA FORGOT SENHA DIGITAR EMAIL
 $app->get('/admin/forgot', function(){
 
 	$page = new CicloVittal\PageAdmin([
@@ -367,7 +367,7 @@ $app->get('/admin/forgot', function(){
 	$page->setTpl("forgot");
 });
 
-//ROTA FORGOT SENT
+//ROTA FORGOT EMAIL ENVIADO
 $app->post('/admin/forgot', function(){
 
 	$user = User::getForgot($_POST["email"]);
@@ -376,6 +376,7 @@ $app->post('/admin/forgot', function(){
 	exit;
 });
 
+//ROTA TELA EMAIL ENVIADO
 $app->get("/admin/forgot/sent", function(){
 
 	$page = new CicloVittal\PageAdmin([

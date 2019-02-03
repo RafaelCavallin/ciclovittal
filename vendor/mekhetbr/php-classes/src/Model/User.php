@@ -4,6 +4,7 @@ namespace CicloVittal\Model;
 
 use \CicloVittal\Model;
 use \CicloVittal\DB\Sql;
+use \CicloVittal\Mailer;
 
 class User extends Model {
 
@@ -170,7 +171,11 @@ class User extends Model {
 				":desip"=>$_SERVER["REMOTE_ADDR"]
 			));
 
-			
+			/*$data = $results[0];
+
+			$results2 = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser)", array(
+				":iduser"=>$data["iduser"]
+			));*/
 
 			if (count($results2) === 0)
 			{
@@ -178,7 +183,9 @@ class User extends Model {
 				
 			}
 			else
-			{
+			{	
+				/*$inadmin = $data['inadmin'];*/
+				
 				$dataRecovery = $results2[0];
 
 				$iv = random_bytes(openssl_cipher_iv_length('aes-256-cbc'));
@@ -187,7 +194,7 @@ class User extends Model {
 
 				$result = base64_encode($iv.$code);
 
-				if ($inadmin === true) {
+				if ($data['inadmin'] === true) {
 
 					$link = "http://www.ciclovittal.com.br/admin/forgot/reset?code=$result";
 
@@ -196,6 +203,16 @@ class User extends Model {
 					$link = "http://www.ciclovittal.com.br/forgot/reset?code=$result";
 
 				} 
+
+				/*if ($inadmin === true) {
+
+					$link = "http://www.ciclovittal.com.br/admin/forgot/reset?code=$result";
+
+				} else {
+
+					$link = "http://www.ciclovittal.com.br/forgot/reset?code=$result";
+
+				}*/
 				
 				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir a senha", "forgot", array(
 					"name"=>$data['desperson'],

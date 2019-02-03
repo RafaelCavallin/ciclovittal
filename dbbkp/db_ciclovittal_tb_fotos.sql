@@ -1,0 +1,52 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: db_ciclovittal
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.1.37-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tb_fotos`
+--
+
+DROP TABLE IF EXISTS `tb_fotos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tb_fotos` (
+  `id` int(30) NOT NULL AUTO_INCREMENT,
+  `foto` char(200) CHARACTER SET latin1 NOT NULL,
+  `datafoto` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_fotos`
+--
+
+LOCK TABLES `tb_fotos` WRITE;
+/*!40000 ALTER TABLE `tb_fotos` DISABLE KEYS */;
+INSERT INTO `tb_fotos` VALUES (23,'01.jpg','2019-01-29 19:05:29'),(24,'02.jpg','2019-01-29 19:05:29'),(25,'03.jpg','2019-01-29 19:05:29'),(26,'04.jpg','2019-01-29 19:05:29'),(27,'05.jpg','2019-01-29 19:06:20'),(28,'06.jpg','2019-01-29 19:06:20'),(29,'07.jpg','2019-01-29 19:06:20'),(30,'08.jpg','2019-01-29 19:06:20'),(31,'09.jpg','2019-01-29 19:06:20'),(32,'10.jpg','2019-01-29 19:06:20'),(33,'11.jpg','2019-01-29 19:07:19'),(34,'12.jpg','2019-01-29 19:07:19'),(35,'13.jpg','2019-01-29 19:07:19'),(36,'14.jpg','2019-01-29 19:07:19'),(37,'15.jpg','2019-01-29 19:07:19'),(38,'16.jpg','2019-01-29 19:10:08'),(39,'17.jpg','2019-01-29 19:10:08'),(40,'18.jpg','2019-01-29 19:10:08'),(41,'19.jpg','2019-01-29 19:10:08'),(42,'20.jpg','2019-01-29 19:10:08'),(43,'21.jpg','2019-01-29 19:10:08'),(44,'22.jpg','2019-01-29 19:10:08'),(49,'enfermagem02.jpg','2019-02-01 20:37:07'),(50,'enfermagem2.jpg','2019-02-01 20:37:13');
+/*!40000 ALTER TABLE `tb_fotos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-02-02 18:33:32
