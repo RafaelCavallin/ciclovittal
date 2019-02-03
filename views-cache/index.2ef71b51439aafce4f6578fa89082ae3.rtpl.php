@@ -3,7 +3,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Bem vindo!
+    Bem vindo <b><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></b>!
     <small></small>
   </h1>
   <ol class="breadcrumb">

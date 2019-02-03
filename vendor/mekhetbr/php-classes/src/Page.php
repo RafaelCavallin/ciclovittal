@@ -3,6 +3,7 @@
 namespace CicloVittal;
 
 use Rain\Tpl;
+use \CicloVittal\Model\User;
 
 class Page {
 
@@ -31,6 +32,8 @@ class Page {
 		Tpl::configure( $config );
 
 		$this->tpl = new Tpl();
+
+		if (isset($_SESSION[User::SESSION])) $this->tpl->assign("user", $_SESSION[User::SESSION]);
 
 		if ($this->options['data']) $this->setData($this->options['data']);
 

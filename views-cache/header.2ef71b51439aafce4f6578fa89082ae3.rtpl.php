@@ -179,7 +179,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="/res/admin/dist/img/user_default2.png" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Usuário</span>
+              <span class="hidden-xs"><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -187,8 +187,8 @@ desired effect
                 <img src="/res/admin/dist/img/user_default2.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Usuário
-                  <small>Membro desde Nov. 2012</small>
+                  <?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                  <small>Membro desde <?php echo formatDate2($user["dtregister"]); ?></small>
                 </p>
               </li>
               
@@ -223,7 +223,7 @@ desired effect
           <img src="/res/admin/dist/img/user_default2.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Usuário</p>
+          <p><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success" style="color: #12d116;"></i> Online</a>
         </div>

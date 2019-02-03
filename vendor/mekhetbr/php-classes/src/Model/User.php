@@ -21,7 +21,11 @@ class User extends Model {
 
 		$db = new Sql();
 
-		$results = $db->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array(
+		/*$results = $db->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array(
+			":LOGIN"=>$login
+		));*/
+
+		$results = $db->select("SELECT * FROM tb_users a INNER JOIN tb_persons b USING(idperson) WHERE a.deslogin = :LOGIN", array(
 			":LOGIN"=>$login
 		));
 

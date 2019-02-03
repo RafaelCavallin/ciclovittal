@@ -15,4 +15,10 @@ function formatDate($date)
 	return date('d/m/Y'." - ".'H:i:s' , strtotime($date));
 }
 
+function formatDate2($date)
+{
+
+	return date('d/m/Y', strtotime($date));
+}
+
  ?>

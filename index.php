@@ -41,7 +41,7 @@ $app->get('/admin', function() {
 	User::verifyLogin();
 
 	$users = User::listAll();
-	    
+ 
 	$page = new CicloVittal\PageAdmin();
 
 	$page->setTpl("index", array(
