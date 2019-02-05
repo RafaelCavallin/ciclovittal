@@ -11,17 +11,20 @@ $app->get('/', function() {
 	$fotos = Galeria::listFotos();
 	$fotos2 = Galeria::listFotos2();
 	$fotos3 = Galeria::listFotos3();
+	
+	$blog = new Blog();
     
 	$page = new CicloVittal\Page();
 
-	$page->setTpl("index", array(
+	$page->setTpl("index", [
 
 		"articles"=>$articles,
 		"fotos"=>$fotos,
 		"fotos2"=>$fotos2,
-		"fotos3"=>$fotos3
+		"fotos3"=>$fotos3,
+		"blog"=>$blog->getValues()
 
-	));
+	]);
 });
 
 

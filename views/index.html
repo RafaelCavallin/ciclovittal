@@ -167,8 +167,10 @@
 	<div class="content">
 		<div id="posts">
 			<div class="posts__item clearfix col-md-8">
+				{loop="$blog"}
+				<img id="image-preview" src="{$blog.desphoto}" class="img-fluid">
+				{/loop}
 				{loop="$articles"}
-				<img src="/res/site/images/{$value.picture}" class="img-fluid" alt="{$value.title}" title="{$value.title}">
 				<h3>{$value.title}</h3>
 				<p>{$value.preview}</p>
 

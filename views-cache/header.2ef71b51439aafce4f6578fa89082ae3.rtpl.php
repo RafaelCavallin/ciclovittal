@@ -188,7 +188,7 @@ desired effect
 
                 <p>
                   <?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
-                  <small>Membro desde <?php echo formatDate2($user["dtregister"]); ?></small>
+                  <small>Membro desde: <?php echo formatDate2($user["dtregister"]); ?></small>
                 </p>
               </li>
               

@@ -23,7 +23,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/admin/blog/create" method="post">
+        <form role="form" action="/admin/blog/create" method="post" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
               <label for="title">Título</label>
@@ -38,11 +38,14 @@
                   <textarea style="resize: none" class="form-control" rows="7" id="body" name="body" placeholder="Digite o texto"></textarea>
                 </div>
             <div class="form-group">
-                  <label for="picture">Imagem</label>
-                  <input type="file" id="picture" name="picture">
-
-                  <!-- <p class="help-block">Example block-level help text here.</p> -->
+              <label for="file">Foto</label>
+              <input type="file" class="form-control" id="file" name="file">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Photo">
                 </div>
+              </div>
+            </div>
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
@@ -57,4 +60,20 @@
 </section>
 <!-- /.content -->
 </div>
-<!-- /.content-wrapper
+<!-- /.content-wrapper -->
+
+<script>
+document.querySelector('#file').addEventListener('change', function(){
+  
+  var file = new FileReader();
+
+  file.onload = function() {
+    
+    document.querySelector('#image-preview').src = file.result;
+
+  }
+
+  file.readAsDataURL(this.files[0]);
+
+});
+</script>

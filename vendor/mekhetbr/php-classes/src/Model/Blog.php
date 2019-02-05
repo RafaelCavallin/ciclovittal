@@ -11,7 +11,7 @@ class Blog extends Model {
 	const SESSION = "Blog";
 
 	protected $fields = [
-		"id", "title", "body", "created", "modified", "picture", "preview"
+		"id", "title", "body", "created", "modified", "preview"
 	];
 
 	public static function listBlog()
@@ -35,10 +35,10 @@ class Blog extends Model {
 
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_blog_save(:title, :body, :picture, :preview)", array(
+		$results = $sql->select("CALL sp_blog_save(:idpost, :title, :body, :preview)", array(
+			"idpost"=>$this->getidpost(),
 			":title"=>$this->gettitle(),
 			":body"=>$this->getbody(),
-			":picture"=>$this->getpicture(),
 			":preview"=>$this->getpreview()
 		));
 
@@ -62,21 +62,20 @@ class Blog extends Model {
 
 	}
 
-	public function update()
+	/*public function update()
 	{
 
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_blogupdate_save(:idpost, :title, :body, :picture, :preview)", array(
+		$results = $sql->select("CALL sp_blogupdate_save(:idpost, :title, :body, :preview", array(
 			":idpost"=>$this->getidpost(),
 			":title"=>$this->gettitle(),
 			":body"=>$this->getbody(),
-			":picture"=>$this->getpicture(),
 			":preview"=>$this->getpreview()
 		));
 
 		$this->setData($results[0]);		
-	}
+	}*/
 
 	public function delete()
 	{
@@ -86,6 +85,89 @@ class Blog extends Model {
 		$sql->query("CALL sp_blog_delete(:idpost)", array(
 			":idpost"=>$this->getidpost()
 		));
+	}
+
+	public function checkPhoto()
+	{
+
+		if (file_exists(
+			$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.
+			"res" . DIRECTORY_SEPARATOR .
+			"site" . DIRECTORY_SEPARATOR .
+			"images" . DIRECTORY_SEPARATOR .
+			"blog" . DIRECTORY_SEPARATOR .
+			$this->getpidpost() . ".jpg"
+			)) {
+
+			$url = "/res/site/images/blog/" . $this->getidpost() . ".jpg";
+		
+		} else {
+
+			$url = "/res/site/images/blog/bg-post.jpg";
+		}
+
+		return $this->setdesphoto($url);
+	}
+
+	public function getValues()
+	{
+
+		$this->checkPhoto();
+
+		$values = parent::getValues();
+
+		return $values;
+	}
+
+	public function setPhoto($file)
+	{ 
+
+		ini_set('gd.jpeg_ignore_warning', 1);
+
+		if(empty( $file['name'])){
+
+		$this->checkPhoto();
+
+		}else{
+
+		$extension = explode('.', $file['name']);
+		$extension = end($extension);
+
+			switch ($extension) {
+
+				case "jpg":
+				case "jpeg":
+				$image = imagecreatefromjpeg($file["tmp_name"]);
+				break;
+				case "gif":
+				$image = imagecreatefromgif($file["tmp_name"]);
+				break;
+				case "png":
+				$image = imagecreatefrompng($file["tmp_name"]);
+				break;
+			}
+
+			/*$image = ($file["tmp_name"]);*/
+
+			/*$dist = $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 
+			"res" . DIRECTORY_SEPARATOR . 
+			"site" . DIRECTORY_SEPARATOR . 
+			"images" . DIRECTORY_SEPARATOR . 
+			"blog" . DIRECTORY_SEPARATOR . 
+			$this->getidpost() . ".jpg";*/
+
+			$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
+			$ds = DIRECTORY_SEPARATOR;
+			$imagePath = str_replace(array("/", "\\"),$ds,$path);
+			/*echo $path;*/
+
+			imagejpeg($image, $path);
+
+			imagedestroy($image);
+
+			$this->checkPhoto();
+		}
+
 	}
 
 }
