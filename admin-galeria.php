@@ -8,13 +8,30 @@ $app->get('/admin/galeria', function() {
 
 	User::verifyLogin();
 
-	$fotos = Galeria::listFotosGaleria();
+	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+	/*$fotos = Galeria::listFotosGaleria();*/
+
+	$pagination = Galeria::getPage($page);
+
+	$pages = [];
+
+	for ($x = 0; $x < $pagination['pages']; $x++)
+	{
+		array_push($pages, [
+			'href'=>'/admin/galeria?'.http_build_query([
+				'page'=>$x+1,
+			]),
+			'text'=>$x+1
+		]);
+	}
 	    
 	$page = new CicloVittal\PageAdmin();
 
 	$page->setTpl("galeria", array(
 
-		"fotos"=>$fotos
+		"fotos"=>$pagination['data'],
+		"pages"=>$pages
 	));
 });
 
