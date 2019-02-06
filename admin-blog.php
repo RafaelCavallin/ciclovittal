@@ -8,14 +8,42 @@ $app->get('/admin/blog', function(){
 
 	User::verifyLogin();
 
-	$articles = Blog::listBlog();
+	$search = (isset($_GET['search'])) ? $_GET['search'] : "";
+
+	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+	if ($search != '') {
+
+		$pagination = Blog::getPageSearch($search, $page);
+
+	}else {
+
+		$pagination = Blog::getPage($page);
+	}
+
+	$pages = [];
+
+	for ($x = 0; $x < $pagination['pages']; $x++)
+	{
+		array_push($pages, [
+			'href'=>'/admin/blog?'.http_build_query([
+				'page'=>$x+1,
+				'search'=>$search
+			]),
+			'text'=>$x+1
+		]);
+	}
 
 	$page = new CicloVittal\PageAdmin();
 
-	$page->setTpl("blog", [
+	$page->setTpl("blog", array(
 
-		"articles"=>$articles
-	]);	
+		"articles"=>$pagination['data'],
+		"search"=>$search,
+		"pages"=>$pages
+	));	
+
+	
 });
 
 //ROTA DELETE BLOG
