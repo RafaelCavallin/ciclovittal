@@ -85,6 +85,7 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
+
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
@@ -95,6 +96,29 @@
 <script src="/res/admin/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/res/admin/dist/js/app.min.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+        var Elem = document.getElementById("Clock");
+        function Horario(){ 
+          var Hoje = new Date(); 
+          var Horas = Hoje.getHours(); 
+          if(Horas < 10){ 
+            Horas = "0"+Horas; 
+          } 
+          var Minutos = Hoje.getMinutes(); 
+          if(Minutos < 10){ 
+            Minutos = "0"+Minutos; 
+          } 
+          var Segundos = Hoje.getSeconds(); 
+          if(Segundos < 10){ 
+            Segundos = "0"+Segundos; 
+          } 
+          Elem.innerHTML = Horas+":"+Minutos+":"+Segundos; 
+          } 
+          window.setInterval("Horario()",1000);
+//-->
+      </SCRIPT>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
