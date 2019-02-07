@@ -24,10 +24,10 @@
 				
 				<ul class="list-unstyled">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="#cursos">Cursos</a></li>
-					<li><a href="#sobre">Sobre Nós</a></li>
-					<li><a href="#blog">Blog</a></li>
-					<li><a href="#contato">Contato</a></li>
+					<li><a href="index.php#cursos">Cursos</a></li>
+					<li><a href="index.php#sobre">Sobre Nós</a></li>
+					<li><a href="index.php#blog">Blog</a></li>
+					<li><a href="index.php#contato">Contato</a></li>
 				</ul>
 
 				<div class="bar-close">
@@ -63,10 +63,10 @@
 					<nav id="menu">
 						<ul class="float-right">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="#cursos">Cursos</a></li>
-							<li><a href="#sobre">Sobre Nós</a></li>
-							<li><a href="#blog">Blog</a></li>
-							<li><a href="#contato">Contato</a></li>
+							<li><a href="index.php#cursos">Cursos</a></li>
+							<li><a href="index.php#sobre">Sobre Nós</a></li>
+							<li><a href="index.php#blog">Blog</a></li>
+							<li><a href="index.php#contato">Contato</a></li>
 							<li><a href="/admin/login">+ Área Restrita</a></li>
 							<li class="search">
 								<div class="input-group">

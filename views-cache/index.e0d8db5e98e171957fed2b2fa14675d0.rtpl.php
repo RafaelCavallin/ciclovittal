@@ -179,6 +179,9 @@
 				<?php } ?>
 			</div>
 		</div>
+		<div>
+			<a href="/blogSite"><p>Veja todos os artigos</p></a>
+		</div>
 	</div> <!-- FIM DO BLOG -->
 
 	<!-- INÍCIO DA SIDEBAR FOTOS -->

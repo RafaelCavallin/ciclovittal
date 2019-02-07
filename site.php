@@ -27,6 +27,20 @@ $app->get('/', function() {
 	]);
 });
 
+$app->get('/blogSite', function(){
+
+	$articles = Blog::listBlogSite();
+
+	$blog = new Blog();
+
+	$page = new CicloVittal\Page();
+
+	$page->setTpl("blogSite", [
+
+		"articles"=>$articles
+	]);
+});
+
 
 
  ?>

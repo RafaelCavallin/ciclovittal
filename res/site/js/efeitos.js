@@ -10,13 +10,13 @@ $(document).ready(function(){
 
   });
 
-  $("#page-up").on("click", function(event){
+  /*$("#page-up").on("click", function(event){
 
   	$("html, body").stop().animate({
     		scrollTop:0 // para voltar pro topo
   	}, 1000); // para fazer a animação de 1 segundo
   	event.preventDefault(); // para cancelar o clique padrão dentro do <a href="#"
-  });
+  });*/
 
   /*$("#page-up").on("click", function(event){
       $('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -35,5 +35,7 @@ $(document).ready(function(){
   	$("header").toggleClass("open-search");
   	$("#input-search-mobile").focus();
   });
+
+
 
 });
