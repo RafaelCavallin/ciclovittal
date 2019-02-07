@@ -23,13 +23,16 @@
               <div class="box-tools">
                 <form action="/admin/blog">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="search" class="form-control pull-right" placeholder="Search" value="<?php echo htmlspecialchars( $search, ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                    <input type="text" name="search" class="form-control pull-right" placeholder="Search" value="<?php echo htmlspecialchars( $search, ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="width: 200px">
                       <div class="input-group-btn">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                       </div>
                     </div>
                 </form>
               </div>
+                <div class="pull-right btnlimparbusca" style="position: relative; left: -20px">
+                  <a href="/admin/blog" class="btn btn-primary"><i class="fa fa-eraser"></i> Limpar busca</a>
+                </div>
             </div>
 
             <div class="box-body no-padding">
