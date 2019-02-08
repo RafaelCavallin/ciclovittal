@@ -28,7 +28,7 @@ $app->get('/', function() {
 	]);
 });
 
-$app->get('/blogSiteArtigos', function(){
+/*$app->get('/blogSiteArtigos', function(){
 
 	$articles = Blog::listBlog();
 
@@ -50,6 +50,48 @@ $app->get('/blogSiteArtigos', function(){
 		"blog"=>$blog->getValues(),
 		"users"=>$users
 	]);
+});*/
+
+$app->get('/blogSiteArtigos', function(){
+
+	$search = (isset($_GET['search'])) ? $_GET['search'] : "";
+
+	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+	if ($search != '') {
+
+		$pagination = Blog::getPageSearch($search, $page, 8);
+
+	}else {
+
+		$pagination = Blog::getPage($page, 8);
+	}
+
+	$pages = [];
+
+	for ($x = 0; $x < $pagination['pages']; $x++)
+	{
+		array_push($pages, [
+			'href'=>'/blogSiteArtigos?'.http_build_query([
+				'page'=>$x+1,
+				'search'=>$search
+			]),
+			'text'=>$x+1
+		]);
+	}
+
+	$page = new CicloVittal\Page([
+
+		"header"=>false,
+		"footer"=>false		
+	]);
+
+	$page->setTpl("blogSiteArtigos", array(
+
+		"articles"=>$pagination['data'],
+		"search"=>$search,
+		"pages"=>$pages
+	));
 });
 
 $app->get('/blogSite/:idpost', function($idpost){

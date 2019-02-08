@@ -1,11 +1,13 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
         <title>CicloVittal - Blog</title>
 
         <link rel="stylesheet" href="/res/site/css/ciclovittal.css ">
 
         <link href="/sidebar/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
         <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 </head>
@@ -22,14 +24,29 @@
 
                 <div class="float-right"><a href="/">Voltar à página principal</a></div>
 
-            <div class="d-flex" id="wrapper">
+                <div class="box-tools">
+                <form action="/blogSiteArtigos">
+                  <div class="input-group input-group-sm" style="width: 300px;">
+                    <input type="text" name="search" class="form-control pull-right" placeholder="Pesquisar" value="<?php echo htmlspecialchars( $search, ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="width: 200px">
+                      <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                </form>
+              </div>
+
+          <div class="btnlimparbusca">
+              <a href="/blogSiteArtigos" class="btn btn-primary"><i class="fa fa-eraser"></i> Limpar busca</a>
+          </div>
+
+            <div id="wrapper">
 
                 <div class="bg-light" id="sidebar-wrapper">
                   <div class="sidebar-heading">Artigos</div>
-                  <div class="list-group list-group-flush">
+                  <div class="list-group">
                     <ul class="list-group" style="overflow: auto">
                         <?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
-                        <li><a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="list-group-item list-group-item-action bg-light"><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
+                        <li><a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="list-group-item list-group-item-action bg-light">>> <?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?> - <?php echo formatDate2($value1["created"]); ?></a></li>
                         <?php } ?>
                     </ul>
                   </div>
@@ -38,6 +55,38 @@
             </div>
 
         </div>
+
+        <div class="container paginacao">
+
+            <div class="content">
+                
+                    <div class="row justify-content-center">
+
+                        <nav>
+                          <ul class="pagination">
+                            <!-- <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                            </li> -->
+                            <?php $counter1=-1;  if( isset($pages) && ( is_array($pages) || $pages instanceof Traversable ) && sizeof($pages) ) foreach( $pages as $key1 => $value1 ){ $counter1++; ?>
+                            <li class="page-item"><a class="page-link" href="<?php echo htmlspecialchars( $value1["href"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["text"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
+                             <?php } ?>
+                            <!-- <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </li> -->
+                          </ul>
+                        </nav>
+
+                    </div>
+
+                </div>   
+
+            </div>
 
 </body>
 

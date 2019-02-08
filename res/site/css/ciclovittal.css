@@ -678,7 +678,6 @@ footer .scroolTop .btnTop button#page-up:hover {
 #blogSite hr {
 	border: #36648B solid 4px;
 	width: 200px;
-	ma/* rgin-left: 276px; */
     margin-top: 0;
     margin-bottom: 30px;
 }
@@ -748,4 +747,45 @@ footer .scroolTop .btnTop button#page-up:hover {
     position: relative;
 }
 
-	
+#blogSite #wrapper #sidebar-wrapper .sidebar-heading {
+	color: #36648B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#blogSite .float-right a {
+
+}
+
+.container.paginacao {
+	margin-top: 20px;	
+}
+
+#blogSite .box-tools {
+	position: relative;
+    top: -10px;
+}
+
+#blogSite .btnlimparbusca {
+	position: relative;
+    top: -52px;
+    left: 265px;
+    margin-bottom: -40px;
+}
+
+#blogSite .input-group-btn {
+	position: relative;
+    left: -35px;
+    top: -3px;
+}
+
+#blogSite a.btn.btn-primary.btn-custom {
+
+	padding: 1px 15px 3px 2px;
+	border-radius: 50px;
+}
+
+#blogSite .btn-icon {
+	padding: 8px;
+	background: #ffffff;
+}
