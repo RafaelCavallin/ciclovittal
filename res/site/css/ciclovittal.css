@@ -661,7 +661,7 @@ footer .scroolTop .btnTop button#page-up:hover {
 
 #blogSite.container {
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
 #blogSite h2 {
@@ -712,7 +712,7 @@ footer .scroolTop .btnTop button#page-up:hover {
     font-size: 14px;
     direction: unset;
     /* overflow-y: hidden; */
-    height: 800px;
+    /* height: 800px; */
     background: none;
 }
 
@@ -751,6 +751,10 @@ footer .scroolTop .btnTop button#page-up:hover {
 	color: #36648B;
     font-size: 20px;
     font-weight: bold;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding-left: 20px;
 }
 
 #blogSite .float-right a {

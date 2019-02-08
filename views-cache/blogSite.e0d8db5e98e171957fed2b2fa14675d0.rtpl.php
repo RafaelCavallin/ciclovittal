@@ -31,7 +31,7 @@
                                 
                                 <h3><?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
 
-                                <textarea readonly data-autoresize rows="2" id="readBlog"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                                <textarea readonly rows="100" id="readBlog"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
 
 Criado em: <?php echo formatDate($blog["created"]); ?>
@@ -131,7 +131,7 @@ Criado em: <?php echo formatDate($blog["created"]); ?>
         }
 
         function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 document.getElementById("page-up").style.display = "block";
             } else {
                 document.getElementById("page-up").style.display = "none";

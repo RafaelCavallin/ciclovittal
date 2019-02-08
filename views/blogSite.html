@@ -31,7 +31,7 @@
                                 
                                 <h3>{$blog.title}</h3>
 
-                                <textarea readonly data-autoresize rows="2" id="readBlog">{$blog.body}
+                                <textarea readonly rows="100" id="readBlog">{$blog.body}
 
 
 Criado em: {function="formatDate($blog.created)"}
@@ -131,7 +131,7 @@ Criado em: {function="formatDate($blog.created)"}
         }
 
         function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 document.getElementById("page-up").style.display = "block";
             } else {
                 document.getElementById("page-up").style.display = "none";
