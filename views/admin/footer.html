@@ -2,10 +2,10 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+      Smart thinking, best results.
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2019 <a href="#">Mekhet Desenvolvimento</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2019-2020 <a href="#">Mekhet Desenvolvimento</a>.</strong> &nbsp;All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
