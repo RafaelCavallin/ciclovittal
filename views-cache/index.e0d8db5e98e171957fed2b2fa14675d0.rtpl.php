@@ -168,19 +168,23 @@
 		<div id="posts">
 			<div class="posts__item clearfix col-md-8">
 				<?php $counter1=-1;  if( isset($blog) && ( is_array($blog) || $blog instanceof Traversable ) && sizeof($blog) ) foreach( $blog as $key1 => $value1 ){ $counter1++; ?>
+
 				<img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid">
 				<?php } ?>
+
 				<?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
+
 				<h3><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
 				<p><?php echo htmlspecialchars( $value1["preview"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
 
 				<p>Criado em: <?php echo formatDate($value1["created"]); ?></p>
-				<a href="#" class="read_more">Continue lendo &raquo;</a>
+				<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="read_more">Continue lendo &raquo;</a>
 				<?php } ?>
+
 			</div>
 		</div>
 		<div>
-			<a href="/blogSite"><p>Veja todos os artigos</p></a>
+			<a href="/blogSiteArtigos"><p>Veja todos os artigos</p></a>
 		</div>
 	</div> <!-- FIM DO BLOG -->
 
@@ -211,8 +215,10 @@
 	
 					<td>
 						<?php $counter1=-1;  if( isset($fotos) && ( is_array($fotos) || $fotos instanceof Traversable ) && sizeof($fotos) ) foreach( $fotos as $key1 => $value1 ){ $counter1++; ?>
+
 						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
 						<?php } ?>
+
 					</td>
 				
 				</tr>
@@ -221,8 +227,10 @@
 			
 					<td>
 						<?php $counter1=-1;  if( isset($fotos2) && ( is_array($fotos2) || $fotos2 instanceof Traversable ) && sizeof($fotos2) ) foreach( $fotos2 as $key1 => $value1 ){ $counter1++; ?>
+
 						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
 						<?php } ?>
+
 					</td>
 				
 				</tr> 
@@ -231,8 +239,10 @@
 				
 					<td>
 						<?php $counter1=-1;  if( isset($fotos3) && ( is_array($fotos3) || $fotos3 instanceof Traversable ) && sizeof($fotos3) ) foreach( $fotos3 as $key1 => $value1 ){ $counter1++; ?>
+
 						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
 						<?php } ?>
+
 					</td>
 				
 				</tr>
@@ -248,8 +258,10 @@
 		<div class=" container foto_gallery col-md-4" id="foto_onclick">
 			<a href="#">
 				<?php $counter1=-1;  if( isset($foto) && ( is_array($foto) || $foto instanceof Traversable ) && sizeof($foto) ) foreach( $foto as $key1 => $value1 ){ $counter1++; ?>
+
 				<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
 				<?php } ?>
+
 			</a>
 		</div>
 

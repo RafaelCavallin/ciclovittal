@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
                   <label for="body">Texto</label>
-                  <textarea style="resize: none" class="form-control" rows="7" id="body" name="body" placeholder="Digite o texto"></textarea>
+                  <textarea name="body" id="body" class="form-control" rows="7" placeholder="Digite o texto" style="resize: none"></textarea>
                 </div>
             <div class="form-group">
               <label for="file">Foto</label>
@@ -76,4 +76,15 @@ document.querySelector('#file').addEventListener('change', function(){
   file.readAsDataURL(this.files[0]);
 
 });
+</script>
+
+<script>
+  ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .then( editor => {
+                  console.log( editor );
+          } )
+          .catch( error => {
+                  console.error( error );
+          } );
 </script>

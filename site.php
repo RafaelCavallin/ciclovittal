@@ -1,6 +1,7 @@
 <?php
 
 use \CicloVittal\Page;
+use \CicloVittal\Model\User;
 use \CicloVittal\Model\Blog;
 use \CicloVittal\Model\Galeria;
 
@@ -22,22 +23,55 @@ $app->get('/', function() {
 		"fotos"=>$fotos,
 		"fotos2"=>$fotos2,
 		"fotos3"=>$fotos3,
-		"blog"=>$blog->getValues()
+		"blog"=>$blog
 
 	]);
 });
 
-$app->get('/blogSite', function(){
+$app->get('/blogSiteArtigos', function(){
 
-	$articles = Blog::listBlogSite();
+	$articles = Blog::listBlog();
+
+	$users = User::listAll();
+
+	$articles = Blog::listBlog();
 
 	$blog = new Blog();
 
-	$page = new CicloVittal\Page();
+	$page = new CicloVittal\Page([
 
-	$page->setTpl("blogSite", [
+		"header"=>false,
+		"footer"=>false
+	]);
 
-		"articles"=>$articles
+	$page->setTpl("blogSiteArtigos", [
+
+		"articles"=>$articles,
+		"blog"=>$blog->getValues(),
+		"users"=>$users
+	]);
+});
+
+$app->get('/blogSite/:idpost', function($idpost){
+
+	$articles = Blog::listBlog();
+
+	$users = User::listAll();
+
+	$blog = new Blog();
+
+	$blog->get((int)$idpost);
+
+	$page = new CicloVittal\Page([
+
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("blogSite",[
+		"blog"=>$blog->getValues(),
+		"articles"=>$articles,
+		"users"=>$users
 	]);
 });
 

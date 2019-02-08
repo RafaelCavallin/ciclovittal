@@ -27,6 +27,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- <link rel="icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" /> -->
   <link rel="shortcut icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
 
+  <script src="ckeditor5/ckeditor.js"></script>
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -188,6 +192,7 @@ desired effect
 
                 <p>
                   <?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
                   <small>Membro desde: <?php echo formatDate2($user["dtregister"]); ?></small>
                 </p>
               </li>
