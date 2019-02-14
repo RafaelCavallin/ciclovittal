@@ -544,12 +544,19 @@ footer .row-cols h4 {
 	padding-bottom: 17px;
 	border-bottom:#fff 1px solid;
 }
+footer .row-cols a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
 footer .row-cols h5 {
 	color: #fff;
 	font-family: Arial;
 	font-size: 14px;
 	margin-bottom: 0;
 }
+/* footer .row-cols h5:hover {
+	text-decoration: underline;
+} */
 footer .row-cols p {
 	color: #fde092;
 	font-family: Arial;

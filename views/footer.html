@@ -24,8 +24,10 @@
 								<ul class="list-unstyled">
 									<li>
 										{loop="$articles"}
-										<h5>{$value.title}</h5>
-										<time>{function="formatDate($value.created)"}</time>
+										<a href="/blogSite/{$value.idpost}">
+											<h5>{$value.title}</h5>
+											<time>{function="formatDate($value.created)"}</time>
+										</a>
 										{/loop}
 									</li>
 								</ul>

@@ -5,7 +5,7 @@
 
         <link rel="stylesheet" href="/res/site/css/ciclovittal.css ">
 
-        <link href="/sidebar/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 

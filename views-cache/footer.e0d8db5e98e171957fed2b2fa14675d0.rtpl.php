@@ -25,8 +25,10 @@
 									<li>
 										<?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
 
-										<h5><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
-										<time><?php echo formatDate($value1["created"]); ?></time>
+										<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+											<h5><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
+											<time><?php echo formatDate($value1["created"]); ?></time>
+										</a>
 										<?php } ?>
 
 									</li>
