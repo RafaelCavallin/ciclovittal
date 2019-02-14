@@ -88,7 +88,19 @@ class Blog extends Model {
 	}
 
 	public function checkPhoto()
-	{
+	{	
+
+		/*$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
+		$ds = DIRECTORY_SEPARATOR;
+		$imagePath = str_replace(array("/", "\\"),$ds,$path);
+
+		if (file_exists($imagePath)) {
+
+			$url = "/res/site/images/blog/" . $this->getidpost() . ".jpg";
+		}else {
+
+			$url = "/res/site/images/blog/bg-post.jpg";
+		}*/
 
 		if (file_exists(
 			$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.
@@ -137,31 +149,31 @@ class Blog extends Model {
 
 				case "jpg":
 				case "jpeg":
-				$image = imagecreatefromjpeg($file["tmp_name"]);
+				$image = imagecreatefromjpeg($file['tmp_name']);
 				break;
 				case "gif":
-				$image = imagecreatefromgif($file["tmp_name"]);
+				$image = imagecreatefromgif($file['tmp_name']);
 				break;
 				case "png":
-				$image = imagecreatefrompng($file["tmp_name"]);
+				$image = imagecreatefrompng($file['tmp_name']);
 				break;
 			}
 
 			/*$image = ($file["tmp_name"]);*/
 
-			/*$dist = $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 
+			$dist = $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 
 			"res" . DIRECTORY_SEPARATOR . 
 			"site" . DIRECTORY_SEPARATOR . 
 			"images" . DIRECTORY_SEPARATOR . 
 			"blog" . DIRECTORY_SEPARATOR . 
-			$this->getidpost() . ".jpg";*/
+			$this->getidpost() . ".jpg";
 
-			$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
+			/*$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
 			$ds = DIRECTORY_SEPARATOR;
-			$imagePath = str_replace(array("/", "\\"),$ds,$path);
-			/*echo $path;*/
+			$imagePath = str_replace(array("/", "\\"),$ds,$path);*/
+			
 
-			imagejpeg($image, $path);
+			imagejpeg($image, $dist);
 
 			imagedestroy($image);
 

@@ -21,7 +21,7 @@
                         <hr>
                 </div>
 
-                <div class="float-right"><a href="/blogSiteArtigos">Voltar à lista de artigos</a></div>
+                <div class="float-right"><a href="/blogSiteArtigos"><span><< </span>Voltar à lista de artigos<span> >></span></a></div>
 
                 <div class="content">
                         

@@ -164,7 +164,33 @@
 			<hr>
 		</div>
 
-	<div class="content">
+		<div class="content">
+		<div id="posts">
+			<div class="posts__item clearfix col-md-8">
+				
+				{loop="$articles"}
+
+				
+				
+				<img id="image-preview" src="{$blog.desphoto}" class="img-fluid">
+				
+				
+
+				<h3>{$value.title}</h3>
+				<p>{$value.preview}</p>
+
+				<p>Criado em: {function="formatDate($value.created)"}</p>
+
+				<a href="/blogSite/{$value.idpost}" class="read_more">Continue lendo &raquo;</a>
+				{/loop}
+			</div>
+		</div>
+		<div>
+			<a href="/blogSiteArtigos"><span><< </span>Veja todos os artigos<span> >></span></a>
+		</div>
+	</div>
+
+	<!-- <div class="content">
 		<div id="posts">
 			<div class="posts__item clearfix col-md-8">
 				{loop="$blog"}
@@ -182,7 +208,7 @@
 		<div>
 			<a href="/blogSiteArtigos"><p>Veja todos os artigos</p></a>
 		</div>
-	</div> <!-- FIM DO BLOG -->
+	</div> --> <!-- FIM DO BLOG -->
 
 	<!-- INÍCIO DA SIDEBAR FOTOS -->
 

@@ -19,38 +19,16 @@ $app->get('/', function() {
 
 	$page->setTpl("index", [
 
-		"articles"=>$articles,
+		/*"articles"=>$articles,*/
 		"fotos"=>$fotos,
 		"fotos2"=>$fotos2,
 		"fotos3"=>$fotos3,
-		"blog"=>$blog
+		/*"blog"=>$blog*/
+		"blog"=>$blog->getValues(),
+		"articles"=>$articles
 
 	]);
 });
-
-/*$app->get('/blogSiteArtigos', function(){
-
-	$articles = Blog::listBlog();
-
-	$users = User::listAll();
-
-	$articles = Blog::listBlog();
-
-	$blog = new Blog();
-
-	$page = new CicloVittal\Page([
-
-		"header"=>false,
-		"footer"=>false
-	]);
-
-	$page->setTpl("blogSiteArtigos", [
-
-		"articles"=>$articles,
-		"blog"=>$blog->getValues(),
-		"users"=>$users
-	]);
-});*/
 
 $app->get('/blogSiteArtigos', function(){
 
@@ -111,6 +89,24 @@ $app->get('/blogSite/:idpost', function($idpost){
 	]);
 
 	$page->setTpl("blogSite",[
+		"blog"=>$blog->getValues(),
+		"articles"=>$articles,
+		"users"=>$users
+	]);
+});
+
+//ROTA BLOG TESTE
+$app->get('/blogTeste', function(){
+
+	$articles = Blog::listBlogSite();
+
+	$users = User::listAll();
+
+	$blog = new Blog();
+
+	$page = new CicloVittal\Page();
+
+	$page->setTpl("blogTeste",[
 		"blog"=>$blog->getValues(),
 		"articles"=>$articles,
 		"users"=>$users

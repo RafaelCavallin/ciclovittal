@@ -22,7 +22,7 @@
                         <hr>
                 </div>
 
-                <div class="float-right"><a href="/">Voltar à página principal</a></div>
+                <div class="float-right"><a href="/"><span><< </span>Voltar à página principal<span> >></span></a></div>
 
                 <div class="box-tools">
                 <form action="/blogSiteArtigos">
@@ -89,5 +89,8 @@
             </div>
 
 </body>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 
 </html>

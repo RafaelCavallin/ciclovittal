@@ -14,11 +14,11 @@ $app->get('/admin/blog', function(){
 
 	if ($search != '') {
 
-		$pagination = Blog::getPageSearch($search, $page);
+		$pagination = Blog::getPageSearch($search, $page, 10);
 
 	}else {
 
-		$pagination = Blog::getPage($page);
+		$pagination = Blog::getPage($page, 10);
 	}
 
 	$pages = [];

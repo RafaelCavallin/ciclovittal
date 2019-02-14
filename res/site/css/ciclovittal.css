@@ -783,13 +783,21 @@ footer .scroolTop .btnTop button#page-up:hover {
     top: -3px;
 }
 
-#blogSite a.btn.btn-primary.btn-custom {
-
-	padding: 1px 15px 3px 2px;
-	border-radius: 50px;
+#blogSite input.form-control.pull-right:focus {
+	box-shadow: 0 0 0 0;
+    /* border: 0 none; */
+    border-color: #ccc;
+    outline: 0;
 }
 
-#blogSite .btn-icon {
-	padding: 8px;
-	background: #ffffff;
+ul.pagination li.page-item:focus {
+	box-shadow: 0 0 0 0;
+    /* border: 0 none; */
+    border-color: #ccc;
+    outline: 0;
+}
+
+#blogSite #posts img#image-preview.img-fluid {
+	width: 710px;
+    height: 180px;
 }
