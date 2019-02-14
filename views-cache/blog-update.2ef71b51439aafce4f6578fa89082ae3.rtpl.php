@@ -27,7 +27,7 @@
           <div class="box-body">
             <div class="form-group">
               <label for="title">Título</label>
-              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" value="<?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" value="<?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" autofocus>
             </div>
             <div class="form-group">
               <label for="preview">Preview</label>

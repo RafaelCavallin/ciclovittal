@@ -27,7 +27,7 @@
           <div class="box-body">
             <div class="form-group">
               <label for="title">Título</label>
-              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título">
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" autofocus>
             </div>
             <div class="form-group">
               <label for="preview">Preview</label>

@@ -95,24 +95,5 @@ $app->get('/blogSite/:idpost', function($idpost){
 	]);
 });
 
-//ROTA BLOG TESTE
-$app->get('/blogTeste', function(){
-
-	$articles = Blog::listBlogSite();
-
-	$users = User::listAll();
-
-	$blog = new Blog();
-
-	$page = new CicloVittal\Page();
-
-	$page->setTpl("blogTeste",[
-		"blog"=>$blog->getValues(),
-		"articles"=>$articles,
-		"users"=>$users
-	]);
-});
-
-
 
  ?>

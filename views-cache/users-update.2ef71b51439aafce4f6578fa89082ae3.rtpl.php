@@ -27,7 +27,7 @@
           <div class="box-body">
             <div class="form-group">
               <label for="desperson">Nome</label>
-              <input type="text" class="form-control" id="desperson" name="desperson" placeholder="Digite o nome" value="<?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="text" class="form-control" id="desperson" name="desperson" placeholder="Digite o nome" value="<?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" autofocus>
             </div>
             <div class="form-group">
               <label for="deslogin">Login</label>
