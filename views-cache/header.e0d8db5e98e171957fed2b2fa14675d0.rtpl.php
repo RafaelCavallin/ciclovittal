@@ -4,12 +4,19 @@
 	<meta charset=utf-8>
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>CicloVittal - Enfermagem</title>
+	
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="/res/site/css/carousel.css">
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="/res/site/css/ciclovittal.css ">
+
 	<link rel="stylesheet" href="/res/site/css/ciclovittal-mobile.css ">
+
 	<link rel="icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
+
 	<link rel="shortcut icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
 
 	<script src="lib/angularjs/angular.min.js"></script>

@@ -55,7 +55,9 @@ Criado em: <?php echo formatDate($blog["created"]); ?>
                         <div class="btnTop">
 
                                 <!-- <a href="#" id="page-up"><i class="fa fa-chevron-up"></i></a> -->
-                                 <button onclick="scrollToY(0, 10000, 'easeInOutSine');" id="page-up"><i class="fa fa-chevron-up"></i></button>
+                                <!--  <button onclick="scrollToY(0, 10000, 'easeInOutSine');" id="page-up"><i class="fa fa-chevron-up"></i></button> -->
+                                <button id="page-up" title="Clique para retornar ao topo da página" data-toggle="tooltip" data-placement="left">
+                                <i class="fa fa-chevron-up"></i></button>
 
                         </div>
                 </div>
@@ -64,12 +66,33 @@ Criado em: <?php echo formatDate($blog["created"]); ?>
 
 </body>
 
-        <script src="lib/jquery/jquery.min.js"></script>
-        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/lib/jquery/jquery.min.js"></script>
+        <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="/res/site/js/efeitos.js"></script>
         <script type="text/javascript">
 
-        window.onscroll = function() {scrollFunction()};
+            $(document).ready(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 10) {
+                    $('#page-up').fadeIn();
+                } else {
+                    $('#page-up').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#page-up').click(function () {
+                /*$('#page-up').tooltip('hide');*/
+                $('body,html').animate({
+                    scrollTop: 10
+                }, 800);
+                return false;
+            });
+            
+            /*$('#page-up').tooltip('show');*/
+
+        }); 
+
+        /*window.onscroll = function() {scrollFunction()};
 
         window.requestAnimFrame = (function(){
           return  window.requestAnimationFrame       ||
@@ -136,7 +159,7 @@ Criado em: <?php echo formatDate($blog["created"]); ?>
             } else {
                 document.getElementById("page-up").style.display = "none";
             }
-        }
+        }*/
 
         </script>
 
