@@ -37,7 +37,7 @@
                   <label for="body">Texto</label>
                   <textarea name="body" id="body" style="resize: none" class="form-control" rows="7" placeholder="Digite o texto"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?></textarea>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="file">Foto</label>
               <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
               <div class="box box-widget">
@@ -45,7 +45,7 @@
                   <img class="img-responsive" id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Photo">
                 </div>
               </div>
-            </div>     
+            </div> -->     
 
           <!-- /.box-body -->
           <div class="box-footer">

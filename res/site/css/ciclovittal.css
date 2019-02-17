@@ -352,7 +352,7 @@ header #logotipo {
     left: -3px;
 }
 #blog.container {
-	height: 1020px;
+	height: 770px;
 	margin-top: -30px;
 }
 #blog .text-center {
@@ -390,7 +390,7 @@ header #logotipo {
 }
 #blog #posts a.read_more {
 	display: block;
-	float: right;
+	/* float: right; */
 	width: 140px;
 	padding: 10px 0;
 	background-color: #36648B;
@@ -399,7 +399,7 @@ header #logotipo {
 	font-weight: 300;
 	color: #fff;
 	transition: all 0.2s linear;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	border-radius: 100px;
 }
 #blog #posts a.read_more:hover {

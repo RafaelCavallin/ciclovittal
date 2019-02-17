@@ -173,14 +173,14 @@
 
 				
 				
-				<img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid">
+				<!-- <img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid"> -->
 				
 				
 
 				<h3><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
 				<p><?php echo htmlspecialchars( $value1["preview"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
 
-				<p>Criado em: <?php echo formatDate($value1["created"]); ?></p>
+				<p style="margin-bottom: 30px;">Criado em: <?php echo formatDate($value1["created"]); ?></p>
 
 				<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="read_more">Continue lendo &raquo;</a>
 				<?php } ?>
@@ -293,7 +293,7 @@
 			</a>
 		</div>
 
-		<div><a href="#" class="read_more">Veja mais fotos &raquo;</a></div>	
+		<div><a href="/gallery" class="read_more">Veja mais fotos &raquo;</a></div>	
 
 	</div> <!-- FIM SIDEBAR FOTOS -->
 

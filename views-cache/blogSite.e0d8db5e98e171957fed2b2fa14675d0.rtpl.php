@@ -27,14 +27,16 @@
                         
                         <div id="posts">
 
-                                <img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid">
+                                <!-- <img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid"> -->
                                 
                                 <h3><?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
 
                                 <textarea readonly rows="100" id="readBlog"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
 
+
 Criado em: <?php echo formatDate($blog["created"]); ?>
+
 
 </textarea>
 

@@ -126,7 +126,7 @@
 	        $('#page-up').click(function () {
 	            /*$('#page-up').tooltip('hide');*/
 	            $('body,html').animate({
-	                scrollTop: 200
+	                scrollTop: 0
 	            }, 800);
 	            return false;
 	        });

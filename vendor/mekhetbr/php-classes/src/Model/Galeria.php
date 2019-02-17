@@ -43,7 +43,7 @@ class Galeria extends Model {
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_fotos ORDER BY id DESC");
+		return $sql->select("SELECT DISTINCT foto FROM tb_fotos ORDER BY id DESC");
 	}
 	public function save()
 	{

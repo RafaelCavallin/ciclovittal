@@ -95,5 +95,57 @@ $app->get('/blogSite/:idpost', function($idpost){
 	]);
 });
 
+//ROTA PARA GALLERY
+/*$app->get('/gallery', function(){
+
+	$fotos = Galeria::listFotosGaleria();
+	$fotos2 = Galeria::listFotos2();
+	$fotos3 = Galeria::listFotos3();
+
+	$page = new CicloVittal\Page([
+
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("gallery", [
+
+		"fotos"=>$fotos,
+		"fotos2"=>$fotos2,
+		"fotos3"=>$fotos3,
+	]);
+});*/
+
+$app->get('/gallery', function(){
+
+	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+	$pagination = Galeria::getPage($page, 8);
+
+	$pages = [];
+
+	for ($x = 0; $x < $pagination['pages']; $x++)
+	{
+		array_push($pages, [
+			'href'=>'/gallery?'.http_build_query([
+				'page'=>$x+1,
+			]),
+			'text'=>$x+1
+		]);
+	}
+
+	$page = new CicloVittal\Page([
+
+		"header"=>false,
+		"footer"=>false		
+	]);
+
+	$page->setTpl("gallery", array(
+
+		"fotos"=>$pagination['data'],
+		"pages"=>$pages
+	));
+});
+
 
  ?>

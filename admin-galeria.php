@@ -50,7 +50,7 @@ $app->get('/admin/galeria/:id/delete', function($id){
 	exit;
 });
 
-//ROTA TELA DE CREATE GALERIA
+/*//ROTA TELA DE CREATE GALERIA
 $app->get('/admin/galeria/create', function(){
 
 	User::verifyLogin();
@@ -58,7 +58,7 @@ $app->get('/admin/galeria/create', function(){
 	$page = new CicloVittal\PageAdmin();
 
 	$page->setTpl("galeria-create");	
-});
+});*/
 
 //ROTA TELA DE UPDATE GALERIA
 $app->get('/admin/galeria/:id', function($id){
