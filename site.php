@@ -120,7 +120,7 @@ $app->get('/gallery', function(){
 
 	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 
-	$pagination = Galeria::getPage($page, 8);
+	$pagination = Galeria::getPage($page, 10);
 
 	$pages = [];
 
