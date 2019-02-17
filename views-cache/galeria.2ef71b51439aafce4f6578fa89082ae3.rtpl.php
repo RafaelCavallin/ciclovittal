@@ -27,8 +27,9 @@
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Foto</th>
-                    <th>Criação</th>
+                    <th style="width: 300px">Foto</th>
+                    <th style="width: 400px">Criação</th>
+                    <th>Ações</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -39,8 +40,8 @@
                     <td><img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="height: 100px; width: 100px"></td>
                     <td><?php echo formatDate($value1["datafoto"]); ?></td/>
                     <td>
-                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir esta foto?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir esta foto?')" class="btn btn-danger btn"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
                   <?php } ?>

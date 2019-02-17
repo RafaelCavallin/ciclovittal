@@ -43,6 +43,7 @@
                     <th>Título</th>
                     <th>Preview</th>
                     <th>Criação</th>
+                    <th style="width: 150px"></th>
                   </tr>
                 </thead>
                 <tbody>

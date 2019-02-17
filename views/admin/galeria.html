@@ -27,8 +27,9 @@
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Foto</th>
-                    <th>Criação</th>
+                    <th style="width: 300px">Foto</th>
+                    <th style="width: 400px">Criação</th>
+                    <th>Ações</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,8 +39,8 @@
                     <td><img src="/res/site/images/galeria/{$value.foto}" style="height: 100px; width: 100px"></td>
                     <td>{function="formatDate($value.datafoto)"}</td/>
                     <td>
-                      <a href="/admin/galeria/{$value.id}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/galeria/{$value.id}/delete" onclick="return confirm('Deseja realmente excluir esta foto?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/admin/galeria/{$value.id}" class="btn btn-primary btn"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/galeria/{$value.id}/delete" onclick="return confirm('Deseja realmente excluir esta foto?')" class="btn btn-danger btn"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
                   {/loop}
