@@ -46,8 +46,10 @@
                   <div class="list-group">
                     <ul class="list-group" style="overflow: auto">
                         <?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
-                        <li><a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="list-group-item list-group-item-action bg-light">>> <?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?> - <?php echo formatDate2($value1["created"]); ?></a></li>
+
+                        <li style="margin-bottom: 5px"><a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="list-group-item list-group-item-action bg-light">>> <?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?> - <?php echo formatDate2($value1["created"]); ?></a></li>
                         <?php } ?>
+
                     </ul>
                   </div>
                 </div>
@@ -71,8 +73,10 @@
                               </a>
                             </li> -->
                             <?php $counter1=-1;  if( isset($pages) && ( is_array($pages) || $pages instanceof Traversable ) && sizeof($pages) ) foreach( $pages as $key1 => $value1 ){ $counter1++; ?>
+
                             <li class="page-item"><a class="page-link" href="<?php echo htmlspecialchars( $value1["href"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["text"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
                              <?php } ?>
+
                             <!-- <li class="page-item">
                               <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>

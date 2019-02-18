@@ -46,7 +46,7 @@
                   <div class="list-group">
                     <ul class="list-group" style="overflow: auto">
                         {loop="$articles"}
-                        <li><a href="/blogSite/{$value.idpost}" class="list-group-item list-group-item-action bg-light">>> {$value.title} - {function="formatDate2($value.created)"}</a></li>
+                        <li style="margin-bottom: 5px"><a href="/blogSite/{$value.idpost}" class="list-group-item list-group-item-action bg-light">>> {$value.title} - {function="formatDate2($value.created)"}</a></li>
                         {/loop}
                     </ul>
                   </div>

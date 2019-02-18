@@ -58,6 +58,14 @@
  
 		</div>
 
+		<div class="scroolTop">
+			<div class="btnTop">
+				<!-- <a href="#" id="page-up"><i class="fa fa-chevron-up"></i></a> -->
+				<!-- <button onclick="scrollToY(0, 10000, 'easeInOutSine');" id="page-up"><i class="fa fa-chevron-up"></i></button> -->
+				<button id="page-up" title="Clique para retornar ao topo da página" data-toggle="tooltip" data-placement="left"><i class="fa fa-chevron-up"></i></button>
+			</div>
+		</div>
+
 		<div class="box-footer clearfix">
 	      	<ul class="pagination pagination-sm no-margin">
 		        <?php $counter1=-1;  if( isset($pages) && ( is_array($pages) || $pages instanceof Traversable ) && sizeof($pages) ) foreach( $pages as $key1 => $value1 ){ $counter1++; ?>
@@ -85,6 +93,31 @@
 			/*window.close();*/
 			}
 		</script>
+
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+	     $(window).scroll(function () {
+	            if ($(this).scrollTop() > 200) {
+	                $('#page-up').fadeIn();
+	            } else {
+	                $('#page-up').fadeOut();
+	            }
+	        });
+	        // scroll body to 0px on click
+	        $('#page-up').click(function () {
+	            /*$('#page-up').tooltip('hide');*/
+	            $('body,html').animate({
+	                scrollTop: 0
+	            }, 800);
+	            return false;
+	        });
+	        
+	        /*$('#page-up').tooltip('show');*/
+
+		});	
+
+	</script>
 
 	</body>
 </html>

@@ -84,9 +84,9 @@ $app->post('/admin/blog/create', function(){
 
  	$blog->setData($_POST);
 
- 	if($_FILES["file"]["name"] !== "") $blog->setPhoto($_FILES["file"]);
+ 	/*if($_FILES["file"]["name"] !== "") $blog->setPhoto($_FILES["file"]);
 
-	$blog->setPhoto($_FILES["file"]);
+	$blog->setPhoto($_FILES["file"]);*/
 
 	$blog->save();
 

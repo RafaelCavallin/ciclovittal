@@ -40,12 +40,6 @@ Criado em: <?php echo formatDate($blog["created"]); ?>
 
 </textarea>
 
-<!-- <button id="up"></button>
-<button id="down"></button> -->
-
-                                <!-- <p class="textoBlog"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
-
-                                <p>Criado em: <?php echo formatDate($blog["created"]); ?></p> -->
 
 
                         </div>
