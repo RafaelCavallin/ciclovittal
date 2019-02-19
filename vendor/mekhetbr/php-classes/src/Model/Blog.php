@@ -87,100 +87,100 @@ class Blog extends Model {
 		));
 	}
 
-	public function checkPhoto()
-	{	
+	// public function checkPhoto()
+	// {	
 
-		/*$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
-		$ds = DIRECTORY_SEPARATOR;
-		$imagePath = str_replace(array("/", "\\"),$ds,$path);
+	// 	/*$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
+	// 	$ds = DIRECTORY_SEPARATOR;
+	// 	$imagePath = str_replace(array("/", "\\"),$ds,$path);
 
-		if (file_exists($imagePath)) {
+	// 	if (file_exists($imagePath)) {
 
-			$url = "/res/site/images/blog/" . $this->getidpost() . ".jpg";
-		}else {
+	// 		$url = "/res/site/images/blog/" . $this->getidpost() . ".jpg";
+	// 	}else {
 
-			$url = "/res/site/images/blog/bg-post.jpg";
-		}*/
+	// 		$url = "/res/site/images/blog/bg-post.jpg";
+	// 	}*/
 
-		if (file_exists(
-			$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.
-			"res" . DIRECTORY_SEPARATOR .
-			"site" . DIRECTORY_SEPARATOR .
-			"images" . DIRECTORY_SEPARATOR .
-			"blog" . DIRECTORY_SEPARATOR .
-			$this->getpidpost() . ".jpg"
-			)) {
+	// 	if (file_exists(
+	// 		$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.
+	// 		"res" . DIRECTORY_SEPARATOR .
+	// 		"site" . DIRECTORY_SEPARATOR .
+	// 		"images" . DIRECTORY_SEPARATOR .
+	// 		"blog" . DIRECTORY_SEPARATOR .
+	// 		$this->getpidpost() . ".jpg"
+	// 		)) {
 
-			$url = "/res/site/images/blog/" . $this->getidpost() . ".jpg";
+	// 		$url = "/res/site/images/blog/" . $this->getidpost() . ".jpg";
 		
-		} else {
+	// 	} else {
 
-			$url = "/res/site/images/blog/bg-post.jpg";
-		}
+	// 		$url = "/res/site/images/blog/bg-post.jpg";
+	// 	}
 
-		return $this->setdesphoto($url);
-	}
+	// 	return $this->setdesphoto($url);
+	// }
 
-	public function getValues()
-	{
+	// public function getValues()
+	// {
 
-		$this->checkPhoto();
+	// 	$this->checkPhoto();
 
-		$values = parent::getValues();
+	// 	$values = parent::getValues();
 
-		return $values;
-	}
+	// 	return $values;
+	// }
 
-	public function setPhoto($file)
-	{ 
+	// public function setPhoto($file)
+	// { 
 
-		ini_set('gd.jpeg_ignore_warning', 1);
+	// 	ini_set('gd.jpeg_ignore_warning', 1);
 
-		if(empty( $file['name'])){
+	// 	if(empty( $file['name'])){
 
-		$this->checkPhoto();
+	// 	$this->checkPhoto();
 
-		}else{
+	// 	}else{
 
-		$extension = explode('.', $file['name']);
-		$extension = end($extension);
+	// 	$extension = explode('.', $file['name']);
+	// 	$extension = end($extension);
 
-			switch ($extension) {
+	// 		switch ($extension) {
 
-				case "jpg":
-				case "jpeg":
-				$image = imagecreatefromjpeg($file['tmp_name']);
-				break;
-				case "gif":
-				$image = imagecreatefromgif($file['tmp_name']);
-				break;
-				case "png":
-				$image = imagecreatefrompng($file['tmp_name']);
-				break;
-			}
+	// 			case "jpg":
+	// 			case "jpeg":
+	// 			$image = imagecreatefromjpeg($file['tmp_name']);
+	// 			break;
+	// 			case "gif":
+	// 			$image = imagecreatefromgif($file['tmp_name']);
+	// 			break;
+	// 			case "png":
+	// 			$image = imagecreatefrompng($file['tmp_name']);
+	// 			break;
+	// 		}
 
-			/*$image = ($file["tmp_name"]);*/
+	// 		/*$image = ($file["tmp_name"]);*/
 
-			$dist = $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 
-			"res" . DIRECTORY_SEPARATOR . 
-			"site" . DIRECTORY_SEPARATOR . 
-			"images" . DIRECTORY_SEPARATOR . 
-			"blog" . DIRECTORY_SEPARATOR . 
-			$this->getidpost() . ".jpg";
+	// 		$dist = $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 
+	// 		"res" . DIRECTORY_SEPARATOR . 
+	// 		"site" . DIRECTORY_SEPARATOR . 
+	// 		"images" . DIRECTORY_SEPARATOR . 
+	// 		"blog" . DIRECTORY_SEPARATOR . 
+	// 		$this->getidpost() . ".jpg";
 
-			/*$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
-			$ds = DIRECTORY_SEPARATOR;
-			$imagePath = str_replace(array("/", "\\"),$ds,$path);*/
+	// 		/*$path = $_SERVER['DOCUMENT_ROOT']."/res/site/images/blog/" . $this->getidpost() . ".jpg";
+	// 		$ds = DIRECTORY_SEPARATOR;
+	// 		$imagePath = str_replace(array("/", "\\"),$ds,$path);*/
 			
 
-			imagejpeg($image, $dist);
+	// 		imagejpeg($image, $dist);
 
-			imagedestroy($image);
+	// 		imagedestroy($image);
 
-			$this->checkPhoto();
-		}
+	// 		$this->checkPhoto();
+	// 	}
 
-	}
+	// }
 
 	public static function getPage($page = 1, $itemsPerPage = 10)
 	{

@@ -9,6 +9,10 @@
 
         <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+        <link rel="icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
+
+        <link rel="shortcut icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
+
         <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 </head>
 
@@ -21,13 +25,13 @@
                         <hr>
                 </div>
 
-                <div class="float-right"><a href="/blogSiteArtigos"><span><< </span>Voltar à lista de artigos<span> >></span></a></div>
+                <div class="float-right"><a href="/blogSiteArtigos" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Voltar à lista de artigos<span> >></span></a></div>
 
                 <div class="content">
                         
                         <div id="posts">
 
-                                <!-- <img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid"> -->
+                                
                                 
                                 <h3><?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
 

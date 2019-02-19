@@ -1,4 +1,4 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?>Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -26,26 +26,23 @@
         <form role="form" action="/admin/blog/create" method="post" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
-              <label for="title">Título</label>
-              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" autofocus>
+              <label for="title">Título</label> <!-- <span id='alert' style="font-weight: bold; color: #f00"></span> -->
+              <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" autofocus onkeyup="mostrarResultado(this.value,100,'spcontando');contarCaracteres(this.value,100,'sprestante')">
+              <span id="spcontando">Nenhum caractere digitado</span><br />
+              <span id="sprestante">Você ainda pode digitar 100 caracteres</span>
             </div>
             <div class="form-group">
               <label for="preview">Preview</label>
-              <input type="text" class="form-control" id="preview" name="preview" placeholder="Digite o preview">
+              <input type="text" class="form-control" id="preview" name="preview" placeholder="Digite o preview" onkeyup="mostrarResultado2(this.value,200,'spcontando2');contarCaracteres2(this.value,200,'sprestante2')">
+              <span id="spcontando2">Nenhum caractere digitado</span><br />
+              <span id="sprestante2">Você ainda pode digitar 200 caracteres</span>
             </div>
             <div class="form-group">
               <label for="body">Texto</label>
-              <textarea name="body" id="body" class="form-control" rows="7" placeholder="Digite o texto" style="resize: none"></textarea>
+              <textarea name="body" id="body" class="form-control" rows="7" placeholder="Digite o texto" style="resize: none" onkeyup="mostrarResultado3(this.value,3100,'spcontando3');contarCaracteres3(this.value,3100,'sprestante3')"></textarea>
+              <span id="spcontando3">Nenhum caractere digitado</span><br />
+              <span id="sprestante3">Você ainda pode digitar 3100 caracteres</span>
             </div>
-            <!-- <div class="form-group">
-              <label for="file">Foto</label>
-              <input type="file" class="form-control" id="file" name="file">
-              <div class="box box-widget">
-                <div class="box-body">
-                  <img class="img-responsive" id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Photo">
-                </div>
-              </div>
-            </div> -->
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
@@ -87,4 +84,110 @@ document.querySelector('#file').addEventListener('change', function(){
           .catch( error => {
                   console.error( error );
           } );
+</script>
+
+
+<!-- COUNTER TITLE -->
+<script>
+function mostrarResultado(box,num_max,campospan){
+  var contagem_carac = box.length;
+  if (contagem_carac != 0){
+    document.getElementById(campospan).innerHTML = contagem_carac + " caracteres digitados";
+    if (contagem_carac == 1){
+      document.getElementById(campospan).innerHTML = contagem_carac + " caracter digitado";
+    }
+    if (contagem_carac >= num_max){
+      document.getElementById(campospan).innerHTML = "Limite de caracteres excedido!";
+    }
+  }else{
+    document.getElementById(campospan).innerHTML = "Nenhum caractere digitado";
+  }
+}
+</script>
+
+<script>
+function contarCaracteres(box,valor,campospan){
+  var conta = valor - box.length;
+  document.getElementById(campospan).innerHTML = "Você ainda pode digitar " + conta + " caracteres";
+  if(box.length >= valor){
+    document.getElementById(campospan).innerHTML = "Opss...você não pode mais digitar!";
+    document.getElementById("title").value = document.getElementById("title").value.substr(0,valor);
+  } 
+}
+</script>
+
+<!-- COUNTER PREVIEW -->
+<script>
+function mostrarResultado2(box,num_max,campospan){
+  var contagem_carac = box.length;
+  if (contagem_carac != 0){
+    document.getElementById(campospan).innerHTML = contagem_carac + " caracteres digitados";
+    if (contagem_carac == 1){
+      document.getElementById(campospan).innerHTML = contagem_carac + " caracter digitado";
+    }
+    if (contagem_carac >= num_max){
+      document.getElementById(campospan).innerHTML = "Limite de caracteres excedido!";
+    }
+  }else{
+    document.getElementById(campospan).innerHTML = "Nenhum caractere digitado";
+  }
+}
+</script>
+
+<script>
+function contarCaracteres2(box,valor,campospan){
+  var conta = valor - box.length;
+  document.getElementById(campospan).innerHTML = "Você ainda pode digitar " + conta + " caracteres";
+  if(box.length >= valor){
+    document.getElementById(campospan).innerHTML = "Opss...você não pode mais digitar!";
+    document.getElementById("preview").value = document.getElementById("preview").value.substr(0,valor);
+  } 
+}
+</script>
+
+<!-- COUNTER BODY -->
+<script>
+function mostrarResultado3(box,num_max,campospan){
+  var contagem_carac = box.length;
+  if (contagem_carac != 0){
+    document.getElementById(campospan).innerHTML = contagem_carac + " caracteres digitados";
+    if (contagem_carac == 1){
+      document.getElementById(campospan).innerHTML = contagem_carac + " caracter digitado";
+    }
+    if (contagem_carac >= num_max){
+      document.getElementById(campospan).innerHTML = "Limite de caracteres excedido!";
+    }
+  }else{
+    document.getElementById(campospan).innerHTML = "Nenhum caractere digitado";
+  }
+}
+</script>
+
+<script>
+function contarCaracteres3(box,valor,campospan){
+  var conta = valor - box.length;
+  document.getElementById(campospan).innerHTML = "Você ainda pode digitar " + conta + " caracteres";
+  if(box.length >= valor){
+    document.getElementById(campospan).innerHTML = "Opss...você não pode mais digitar!";
+    document.getElementById("body").value = document.getElementById("body").value.substr(0,valor);
+  } 
+}
+</script>
+
+<!-- <script>
+  function textLength(value){
+   var maxLength = 100;
+   if(value.length > maxLength) return false;
+   return true;
+  }
+  var oldValue = '';
+  var alert = document.getElementById('alert');
+  document.getElementById('title').onkeyup = function(){
+       if(!textLength(this.value))
+       {
+           this.value = oldValue;
+           alert.innerHTML = '(Texto muito longo!)'
+       }
+       else oldValue = this.value;
+  }
 </script>

@@ -30,7 +30,7 @@
 
 			    <!-- <a href="/" class="btn btn-danger"><i class="fa fa-window-close"></i></a> -->
 
-			    <div class="float-right"><a href="/"><span><< </span>Voltar à página principal<span> >></span></a></div>
+			    <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b; font-size: 12px"><span><< </span>Voltar à página principal<span> >></span></a></div>
 			  
 			    <p class="page-description text-center">Clique na imagem para aumentar</p>
 			      

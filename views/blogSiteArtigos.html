@@ -9,6 +9,10 @@
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+        <link rel="icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
+
+        <link rel="shortcut icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
+
         <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 </head>
 
@@ -22,7 +26,7 @@
                         <hr>
                 </div>
 
-                <div class="float-right"><a href="/"><span><< </span>Voltar à página principal<span> >></span></a></div>
+                <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Voltar à página principal<span> >></span></a></div>
 
                 <div class="box-tools">
                 <form action="/blogSiteArtigos">

@@ -124,9 +124,9 @@ $app->post('/admin/blog/:idpost', function($idpost){
 
 	$blog->save();
 
-	if($_FILES["file"]["name"] !== "") $blog->setPhoto($_FILES["file"]);
+	/*if($_FILES["file"]["name"] !== "") $blog->setPhoto($_FILES["file"]);
 
-	$blog->setPhoto($_FILES["file"]);
+	$blog->setPhoto($_FILES["file"]);*/
 
 	header("Location: /admin/blog");
 	exit;

@@ -173,7 +173,7 @@
 
 				
 				
-				<!-- <img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid"> -->
+				
 				
 				
 
@@ -188,33 +188,12 @@
 			</div>
 		</div>
 		<div>
-			<a href="/blogSiteArtigos"><span><< </span>Veja todos os artigos<span> >></span></a>
+			<a href="/blogSiteArtigos" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Veja todos os artigos<span> >></span></a>
+			<!-- <a href="/blogSiteArtigos" class="btn btn-primary">Veja todos artigos</a> -->
 		</div>
 	</div>
 
-	<!-- <div class="content">
-		<div id="posts">
-			<div class="posts__item clearfix col-md-8">
-				<?php $counter1=-1;  if( isset($blog) && ( is_array($blog) || $blog instanceof Traversable ) && sizeof($blog) ) foreach( $blog as $key1 => $value1 ){ $counter1++; ?>
-
-				<img id="image-preview" src="<?php echo htmlspecialchars( $blog["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid">
-				<?php } ?>
-
-				<?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
-
-				<h3><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
-				<p><?php echo htmlspecialchars( $value1["preview"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
-
-				<p>Criado em: <?php echo formatDate($value1["created"]); ?></p>
-				<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="read_more">Continue lendo &raquo;</a>
-				<?php } ?>
-
-			</div>
-		</div>
-		<div>
-			<a href="/blogSiteArtigos"><p>Veja todos os artigos</p></a>
-		</div>
-	</div> --> <!-- FIM DO BLOG -->
+	 <!-- FIM DO BLOG -->
 
 	<!-- INÍCIO DA SIDEBAR FOTOS -->
 
