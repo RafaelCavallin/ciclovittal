@@ -33,7 +33,7 @@
 </head>
 	<body>
 
-		<div class="container" style="border: 15px solid #ccc; margin-top: 200px; color: #36648B; padding: 20px; width: 50%">
+		<div class="container" style="border: 15px solid #ccc; margin-top: 100px; color: #36648B; padding: 20px; width: 50%">
 			<div class="text-center">
 				<h1 style="margin-bottom: 30px">Upload de Foto</h1>
 				<?php if($msg != false) echo "<p> $msg </p>"; ?>
@@ -42,6 +42,17 @@
 						<!-- <label for="arquivo">Imagem</label> -->
 						<input type="file" id="arquivo" required name="arquivo">
 				</div>
+
+				<!-- VISUALIZAR IMAGEM -->
+
+				<div class="box box-widget">
+	                <div class="box-body container" style="margin-bottom: 30px">
+	                  <img class="img-responsive" id="image-preview" src="res/site/images/galeria/no-preview2.png" alt="Photo" style="width: 330px; height: 213px">
+	                </div>
+              	</div>
+
+              	<!-- FIM VISUALIZAR IMAGEM -->
+
 					<input class="btn btn-primary" type="submit" value="Enviar">
 					<a href="javascript:close_window();" class="btn btn-danger">Fechar</a>
 					</form>
@@ -62,6 +73,22 @@
 				close();
 			}
 
+		</script>
+
+		<script>
+			document.querySelector('#arquivo').addEventListener('change', function(){
+			  
+			  var file = new FileReader();
+
+			  file.onload = function() {
+			    
+			    document.querySelector('#image-preview').src = file.result;
+
+			  }
+
+			  file.readAsDataURL(this.files[0]);
+
+			});
 		</script>
 
 	</body>

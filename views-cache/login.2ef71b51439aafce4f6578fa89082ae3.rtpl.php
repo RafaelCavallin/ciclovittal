@@ -45,14 +45,14 @@
         <input type="password" class="form-control" placeholder="Senha" name="despassword">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <div class="row">
-        <div class="col-xs-8">
+      <div class="row" style="margin-bottom: 10px">
+       <!--  <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
               <input type="checkbox"> Lembrar de mim
             </label>
           </div>
-        </div>
+        </div> -->
         <!-- /.col -->
         <div class="col-xs-4">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>

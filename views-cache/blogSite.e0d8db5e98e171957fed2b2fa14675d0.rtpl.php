@@ -35,7 +35,7 @@
                                 
                                 <h3><?php echo htmlspecialchars( $blog["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h3>
 
-                                <textarea readonly rows="100" id="readBlog"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                                <textarea readonly rows="120" id="readBlog"><?php echo htmlspecialchars( $blog["body"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
 
 

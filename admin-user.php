@@ -70,11 +70,11 @@ $app->get('/admin/users', function(){
 
 	if ($search != '') {
 
-		$pagination = User::getPageSearch($search, $page);
+		$pagination = User::getPageSearch($search, $page, 10);
 
 	}else {
 
-		$pagination = User::getPage($page);
+		$pagination = User::getPage($page, 10);
 	}
 
 	//($page, quantidade de usuários por página)

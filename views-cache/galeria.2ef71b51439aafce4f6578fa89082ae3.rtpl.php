@@ -40,7 +40,7 @@
                     <td><img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="height: 100px; width: 100px"></td>
                     <td><?php echo formatDate($value1["datafoto"]); ?></td/>
                     <td>
-                      <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn"><i class="fa fa-edit"></i> Editar</a>
+                      <!-- <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn"><i class="fa fa-edit"></i> Editar</a> -->
                       <a href="/admin/galeria/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir esta foto?')" class="btn btn-danger btn"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
