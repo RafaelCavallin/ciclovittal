@@ -30,13 +30,22 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<style>
+		
+		.container p {
+			color: #36d12b;
+			font-weight: 600;
+		}
+
+	</style>
+
 </head>
 	<body>
 
-		<div class="container" style="border: 15px solid #ccc; margin-top: 80px; color: #36648B; padding: 20px; width: 50%">
+		<div class="container" style="border: 15px solid #ccc; margin-top: 60px; color: #36648B; padding: 20px; width: 50%">
 			<div class="text-center">
-				<h1 style="margin-bottom: 30px">Upload de Foto</h1>
-				<?php if($msg != false) echo "<p> $msg </p>"; ?>
+				<h1 style="margin-bottom: 20px">Upload de Foto</h1>
+				<?php if($msg != false) echo "<p style=color: #36d12b; font-weight: 600> $msg </p>"; ?>
 				<div class="form-group">
 					<form action="upload.php" method="post" enctype="multipart/form-data">
 						<!-- <label for="arquivo">Imagem</label> -->

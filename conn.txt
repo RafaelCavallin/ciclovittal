@@ -1,0 +1,4 @@
+const HOSTNAME = "localhost";
+const USERNAME = "id5249882_ciclovittal";
+const PASSWORD = "soc789456123";
+const DBNAME = "id5249882_db_ciclovittal";
