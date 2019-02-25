@@ -32,7 +32,7 @@
 
 			    <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b; font-size: 12px"><span><< </span>Voltar à página principal<span> >></span></a></div>
 			  
-			    <p class="page-description text-center">Clique na imagem para aumentar</p>
+			    <p class="page-description text-center">Clique na foto para ampliar</p>
 			      
 			    <div class="tz-gallery">
 			  
@@ -42,8 +42,8 @@
 			            	
 			                <div class="card" style="border: none">
 			                	<?php $counter1=-1;  if( isset($fotos) && ( is_array($fotos) || $fotos instanceof Traversable ) && sizeof($fotos) ) foreach( $fotos as $key1 => $value1 ){ $counter1++; ?>
-			                    <a class="lightbox" href="res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
-			                    <img src="res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Park" class="card-img-top">
+			                    <a class="lightbox" href="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+			                    <img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Park" class="card-img-top">
 			                    <?php } ?>
 			                    </a>
 			                </div>

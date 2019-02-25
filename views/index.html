@@ -24,11 +24,11 @@
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="carousel-control-prev-icon" aria-hidden="true" style="margin-left: -80px"></span>
 		    <span class="sr-only">Previous</span>
 		  </a>
 		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="carousel-control-next-icon" aria-hidden="true" style="margin-right: -80px"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
@@ -212,57 +212,73 @@
 
 		<div class="container">
 
-			<table>
+			<div class="tz-gallery">
 
-				<tbody>
+				<table>
+
+					<tbody>
+						
+					<tr>
+		
+						<td>
+							{loop="$fotos"}
+							<a class="lightbox" href="/res/site/images/galeria/{$value.foto}">
+							<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+							{/loop}
+							</a>
+						</td>
 					
-				<tr>
-	
-					<td>
-						{loop="$fotos"}
-						<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						{/loop}
-					</td>
-				
-				</tr>
+					</tr>
 
-				<tr>
-			
-					<td>
-						{loop="$fotos2"}
-						<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						{/loop}
-					</td>
+					<tr>
 				
-				</tr> 
+						<td>
+							{loop="$fotos2"}
+							<a class="lightbox" href="/res/site/images/galeria/{$value.foto}">
+							<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+							{/loop}
+							</a>
+						</td>
+					
+					</tr> 
 
-				<tr>
-				
-					<td>
-						{loop="$fotos3"}
-						<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						{/loop}
-					</td>
-				
-				</tr>
-				
-				</tbody>
+					<tr>
+					
+						<td>
+							{loop="$fotos3"}
+							<a class="lightbox" href="/res/site/images/galeria/{$value.foto}">
+							<img src="/res/site/images/galeria/{$value.foto}" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+							{/loop}
+							</a>
+						</td>
+					
+					</tr>
+					
+					</tbody>
 
-			</table>
+				</table>
+
+				<div class="clique text-center">
+					<p style="color: #36648b">Clique na foto para ampliar</p>
+				</div>
+
+			</div>
 
 		</div>
 
 		<!-- FIM GALERIA -->
 
-		<div class=" container foto_gallery col-md-4" id="foto_onclick">
+		<!-- <div class=" container foto_gallery col-md-4" id="foto_onclick">
 			<a href="#">
 				{loop="$foto"}
 				<img src="/res/site/images/galeria/{$value.foto}" alt="">
 				{/loop}
 			</a>
-		</div>
+		</div> -->
 
-		<div><a href="/gallery" class="read_more">Veja mais fotos &raquo;</a></div>	
+		<div class="btn-gallery">
+			<a href="/gallery" class="read_more">Veja mais fotos &raquo;</a>
+		</div>	
 
 	</div> <!-- FIM SIDEBAR FOTOS -->
 

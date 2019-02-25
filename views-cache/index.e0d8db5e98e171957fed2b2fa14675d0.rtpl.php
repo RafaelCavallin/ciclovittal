@@ -24,11 +24,11 @@
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="carousel-control-prev-icon" aria-hidden="true" style="margin-left: -80px"></span>
 		    <span class="sr-only">Previous</span>
 		  </a>
 		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="carousel-control-next-icon" aria-hidden="true" style="margin-right: -80px"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
@@ -214,55 +214,69 @@
 
 		<div class="container">
 
-			<table>
+			<div class="tz-gallery">
 
-				<tbody>
+				<table>
+
+					<tbody>
+						
+					<tr>
+		
+						<td>
+							<?php $counter1=-1;  if( isset($fotos) && ( is_array($fotos) || $fotos instanceof Traversable ) && sizeof($fotos) ) foreach( $fotos as $key1 => $value1 ){ $counter1++; ?>
+
+							<a class="lightbox" href="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+							<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+							<?php } ?>
+
+							</a>
+						</td>
 					
-				<tr>
-	
-					<td>
-						<?php $counter1=-1;  if( isset($fotos) && ( is_array($fotos) || $fotos instanceof Traversable ) && sizeof($fotos) ) foreach( $fotos as $key1 => $value1 ){ $counter1++; ?>
+					</tr>
 
-						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						<?php } ?>
-
-					</td>
+					<tr>
 				
-				</tr>
+						<td>
+							<?php $counter1=-1;  if( isset($fotos2) && ( is_array($fotos2) || $fotos2 instanceof Traversable ) && sizeof($fotos2) ) foreach( $fotos2 as $key1 => $value1 ){ $counter1++; ?>
 
-				<tr>
-			
-					<td>
-						<?php $counter1=-1;  if( isset($fotos2) && ( is_array($fotos2) || $fotos2 instanceof Traversable ) && sizeof($fotos2) ) foreach( $fotos2 as $key1 => $value1 ){ $counter1++; ?>
+							<a class="lightbox" href="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+							<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+							<?php } ?>
 
-						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						<?php } ?>
+							</a>
+						</td>
+					
+					</tr> 
 
-					</td>
-				
-				</tr> 
+					<tr>
+					
+						<td>
+							<?php $counter1=-1;  if( isset($fotos3) && ( is_array($fotos3) || $fotos3 instanceof Traversable ) && sizeof($fotos3) ) foreach( $fotos3 as $key1 => $value1 ){ $counter1++; ?>
 
-				<tr>
-				
-					<td>
-						<?php $counter1=-1;  if( isset($fotos3) && ( is_array($fotos3) || $fotos3 instanceof Traversable ) && sizeof($fotos3) ) foreach( $fotos3 as $key1 => $value1 ){ $counter1++; ?>
+							<a class="lightbox" href="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+							<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
+							<?php } ?>
 
-						<img src="/res/site/images/galeria/<?php echo htmlspecialchars( $value1["foto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-fluid" alt="Fotos Escola Ciclo Vittal" title="Fotos Escola Ciclo Vittal">
-						<?php } ?>
+							</a>
+						</td>
+					
+					</tr>
+					
+					</tbody>
 
-					</td>
-				
-				</tr>
-				
-				</tbody>
+				</table>
 
-			</table>
+				<div class="clique text-center">
+					<p style="color: #36648b">Clique na foto para ampliar</p>
+				</div>
+
+			</div>
 
 		</div>
 
 		<!-- FIM GALERIA -->
 
-		<div class=" container foto_gallery col-md-4" id="foto_onclick">
+		<!-- <div class=" container foto_gallery col-md-4" id="foto_onclick">
 			<a href="#">
 				<?php $counter1=-1;  if( isset($foto) && ( is_array($foto) || $foto instanceof Traversable ) && sizeof($foto) ) foreach( $foto as $key1 => $value1 ){ $counter1++; ?>
 
@@ -270,9 +284,11 @@
 				<?php } ?>
 
 			</a>
-		</div>
+		</div> -->
 
-		<div><a href="/gallery" class="read_more">Veja mais fotos &raquo;</a></div>	
+		<div class="btn-gallery">
+			<a href="/gallery" class="read_more">Veja mais fotos &raquo;</a>
+		</div>	
 
 	</div> <!-- FIM SIDEBAR FOTOS -->
 

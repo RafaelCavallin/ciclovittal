@@ -108,6 +108,7 @@
 	
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 	<script src="/res/site/js/efeitos.js"></script>
 
 	<script type="text/javascript">
@@ -133,6 +134,56 @@
 
 		});	
 
+	</script>
+
+	<script>
+	  jQuery(document).ready(function($) {
+	    // Variavel de controle para indentificar se apliquei o efeito
+	    var controleNav = false;
+	    // Capturo o evento de rolagem da pagina
+	    $(document).scroll(function(e) {
+	        // Adiciono o valor de movimento do topo da pagina na variavel
+	        var scrollTop = $(document).scrollTop();
+	        // verivico se a movimentação do scroll é maior que o tamanho do height do meu menu
+	        if (scrollTop > $('.navbar').height()) {
+	            // verifico se já foi aplicado o efeito para fixiar o menu
+	            if (controleNav == false) {
+	                // removo a classe navbar-static-top e adciono a classe navbar-fixed-top
+	                // tornando o menu fixo no topo do nosso site
+	                $('.navbar').removeClass('navbar-static-top').addClass('navbar-fixed-top');
+	                // torno nosso menu invisivel para aplicação do efeito de fade
+	                $('.navbar').hide();
+	                // aplico o efeito de fadeIn em nosso menu
+	                $('.navbar').fadeIn('slow');
+	                // digo para a variavel de controle que o efeito foi aplicado
+	                controleNav = true;
+	            }
+	        } else {
+	            // Ao retornar o ao topo do site verifico se o efeito foi aplicado
+	            if (controleNav == true) {
+	                // caso o efeito tenha sido aplicado removo a classe navbar-fixed-top 
+	                // e retorno a classe navbar-static-top tornando o menu estatico novamente
+	                $('.navbar').removeClass('navbar-fixed-top').addClass('navbar-static-top');
+	                // Digo para a variavel controleNav que o efeito não esta mais aplicado
+	                controleNav = false;
+	            }
+	        }
+	    });
+	});
+  </script>
+
+	<script>
+    	baguetteBox.run('.tz-gallery');
+	</script>
+
+	<script type="text/javascript">
+			function fechar() {
+			janela = top; 
+			janela.opener = top; 
+			janela.close();
+
+			/*window.close();*/
+			}
 	</script>
 	
 	<!-- <script type="text/javascript">

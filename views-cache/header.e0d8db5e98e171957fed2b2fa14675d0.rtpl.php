@@ -15,9 +15,13 @@
 
 	<link rel="stylesheet" href="/res/site/css/ciclovittal-mobile.css ">
 
+	<link rel="stylesheet" href="/res/site/css/gallery-index.css ">
+
 	<link rel="icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
 
 	<link rel="shortcut icon" href="/res/site/images/3505ciclo-logo-grd-footer.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 
 	<script src="lib/angularjs/angular.min.js"></script>
 </head>
@@ -66,7 +70,7 @@
 
 				</div>
 
-			<div class="container">
+		<div class="container">
 					
 					<nav id="menu">
 						<ul class="float-right">
@@ -89,5 +93,7 @@
 					</nav>
 			</div>
 
-		</header>
+	</header>
+
+
 

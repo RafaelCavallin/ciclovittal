@@ -42,7 +42,9 @@ header #logotipo {
 	height: 200px;
 }
 #menu {
-	margin: 40px 0;
+	/* margin: 40px 0; */
+	margin-top: 40px;
+    left: 150px;
 }
 #menu li {
 	display: inline-block;
@@ -105,9 +107,10 @@ header #logotipo {
 	top: 0px;
 }
 #banner #carouselExampleIndicators ol.carousel-indicators li{
-	border-color: #2c6e9700;   
+	/* border-color: #2c6e9700; */   
 /* #2c6e97 com um 00 no final */
 	background-color: #343a40;
+	background-color: #fff;
 
 }
 #cursos {
@@ -420,6 +423,7 @@ header #logotipo {
 	position: relative;
     right: -770px;
     top: -942px;
+    width: 40%;
 }
 #blog #sidebar .widget {
 	margin-left: 15px;
@@ -484,6 +488,17 @@ header #logotipo {
     transition: all 0.2s linear;
     border-radius: 100px;
 }
+#blog #sidebar .btn-gallery {
+    position: relative;
+    top: -30px;
+    right: -25px;
+}
+#blog #sidebar a.lightbox {
+	text-decoration: none;
+}
+#blog #sidebar a.lightbox:hover {
+	text-decoration: none;
+}
 footer {
 
 	margin-top: 90px;
@@ -526,8 +541,10 @@ footer .float-left {
 footer .text-roxo {
 	color: #fff;
 	font-family: 'OpenSans';
-	font-weight: bold;
+	/* font-weight: bold; */
 	font-size: 14px;
+	right: 30px;
+    position: relative;
 }
 footer .logotipo {
 	margin-top: 30px;

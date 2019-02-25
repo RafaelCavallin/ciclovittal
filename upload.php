@@ -33,7 +33,7 @@
 </head>
 	<body>
 
-		<div class="container" style="border: 15px solid #ccc; margin-top: 100px; color: #36648B; padding: 20px; width: 50%">
+		<div class="container" style="border: 15px solid #ccc; margin-top: 80px; color: #36648B; padding: 20px; width: 50%">
 			<div class="text-center">
 				<h1 style="margin-bottom: 30px">Upload de Foto</h1>
 				<?php if($msg != false) echo "<p> $msg </p>"; ?>

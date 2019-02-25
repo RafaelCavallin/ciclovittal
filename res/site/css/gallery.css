@@ -38,6 +38,14 @@ body {
     padding: 40px;
 }
 
+.tz-gallery .ligtbox a  {
+  text-decoration: none !important;
+}
+
+.tz-gallery .ligtbox a:hover {
+  text-decoration: none !important;
+}
+
 .tz-gallery .lightbox img {
     width: 100%;
     margin-bottom: 30px;
