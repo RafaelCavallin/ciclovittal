@@ -80,7 +80,7 @@
 							<li><a href="index.php#blog">Blog</a></li>
 							<li><a href="/gallery">Galeria</a></li>
 							<li><a href="index.php#contato">Contato</a></li>
-							<li><a href="/admin/login" target="_blank">+ Área Restrita</a></li>
+							<li><a href="/admin/login" target="_blank"><i class="fas fa-plus"></i>&nbsp;Área Restrita</a></li>
 							<!-- <li class="search">
 								<div class="input-group">
 									<input type="search" class="form-control" placeholder="Pesquisar" id="input-search">

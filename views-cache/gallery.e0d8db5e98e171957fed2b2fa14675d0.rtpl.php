@@ -30,9 +30,13 @@
 
 			    <!-- <a href="/" class="btn btn-danger"><i class="fa fa-window-close"></i></a> -->
 
-			    <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b; font-size: 12px"><span><< </span>Voltar à página principal<span> >></span></a></div>
+			    <div class="float-right">
+                  <a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b; font-size: 12px"><i class="fas fa-angle-double-left"></i>&nbsp;Voltar à página principal&nbsp;<i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+			    <!-- <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b; font-size: 12px"><span><< </span>Voltar à página principal<span> >></span></a></div> -->
 			  
-			    <p class="page-description text-center">Clique na foto para ampliar</p>
+			    <p class="page-description text-center">Clique na foto para ampliar&nbsp;<i class="fa fa-search-plus"></i></p>
 			      
 			    <div class="tz-gallery">
 			  

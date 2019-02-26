@@ -25,7 +25,7 @@
 									<li>
 										{loop="$articles"}
 										<a href="/blogSite/{$value.idpost}">
-											<h5>{$value.title}</h5>
+											<h5><i class="fas fa-angle-double-right"></i>&nbsp;{$value.title}</h5>
 											<time>{function="formatDate($value.created)"}</time>
 										</a>
 										{/loop}
@@ -38,11 +38,11 @@
 								<h4>LINKS</h4>
 
 								<ul class="list-unstyled">
-									<li><a href="index.php"><i class="fa fa-angle-right"></i> Home</a></li>
-									<li><a href="#cursos"><i class="fa fa-angle-right"></i> Cursos</a></li>
-									<li><a href="#sobre"><i class="fa fa-angle-right"></i> Sobre Nós</a></li>
-									<li><a href="#blog"><i class="fa fa-angle-right"></i> Blog</a></li>
-									<li><a href="/gallery"><i class="fa fa-angle-right"></i> Galeria</a></li>
+									<li><a href="index.php"><i class="fas fa-angle-double-right"></i>&nbsp;Home</a></li>
+									<li><a href="#cursos"><i class="fas fa-angle-double-right"></i>&nbsp;Cursos</a></li>
+									<li><a href="#sobre"><i class="fas fa-angle-double-right"></i>&nbsp;Sobre Nós</a></li>
+									<li><a href="#blog"><i class="fas fa-angle-double-right"></i>&nbsp;Blog</a></li>
+									<li><a href="/gallery"><i class="fas fa-angle-double-right"></i>&nbsp;Galeria</a></li>
 								</ul>
 
 							</div>

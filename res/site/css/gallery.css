@@ -19,6 +19,8 @@ body {
 }
 
 .gallery-container h1 {
+    position: relative;
+    top: 20px;
     color: #36648B;
     text-align: center;
     /* margin-top: 70px; */

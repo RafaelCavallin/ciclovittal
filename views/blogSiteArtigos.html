@@ -26,7 +26,11 @@
                         <hr>
                 </div>
 
-                <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Voltar à página principal<span> >></span></a></div>
+                <div class="float-right">
+                  <a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b"><i class="fas fa-angle-double-left"></i>&nbsp;Voltar à página principal&nbsp;<i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+                <!-- <div class="float-right"><a href="/" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Voltar à página principal<span> >></span></a></div> -->
 
                 <div class="box-tools">
                 <form action="/blogSiteArtigos">

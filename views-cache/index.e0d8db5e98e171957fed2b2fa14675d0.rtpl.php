@@ -112,7 +112,7 @@
 				<p>Lorem ipsum dolor sit amet, 
 				consectetur adipiscing elit, 
 				sed do eiusmod tempor incid...</p>
-				<a href="#" class="read_more">SAIBA +</a>
+				<a href="#" class="read_more">SAIBA&nbsp;<i class="fas fa-plus"></i></a>
 			</div>
 			<div class="sobre__item col-xs-3">
 				<img src="/res/site/images/sala.jpg" class="img-fluid" alt="sobre" title="sobre">
@@ -120,7 +120,7 @@
 				<p>Lorem ipsum dolor sit amet, 
 				consectetur adipiscing elit, 
 				sed do eiusmod tempor incid...</p>
-				<a href="#" class="read_more">SAIBA +</a>
+				<a href="#" class="read_more">SAIBA&nbsp;<i class="fas fa-plus"></i></a>
 			</div>
 			<div class="sobre__item col-xs-3">
 				<img src="/res/site/images/material.jpg" class="img-fluid" alt="sobre" title="sobre">
@@ -128,7 +128,7 @@
 				<p>Lorem ipsum dolor sit amet, 
 				consectetur adipiscing elit, 
 				sed do eiusmod tempor incid...</p>
-				<a href="#" class="read_more">SAIBA +</a>
+				<a href="#" class="read_more">SAIBA&nbsp;<i class="fas fa-plus"></i></a>
 			</div>
 			<div class="sobre__item col-xs-3">
 				<img src="/res/site/images/laboratorio.jpg" class="img-fluid" alt="sobre" title="sobre">
@@ -136,7 +136,7 @@
 				<p>Lorem ipsum dolor sit amet, 
 				consectetur adipiscing elit, 
 				sed do eiusmod tempor incid...</p>
-				<a href="#" class="read_more">SAIBA +</a>
+				<a href="#" class="read_more">SAIBA&nbsp;<i class="fas fa-plus"></i></a>
 			</div>
 
 		</div>
@@ -182,13 +182,14 @@
 
 				<p style="margin-bottom: 30px;">Criado em: <?php echo formatDate($value1["created"]); ?></p>
 
-				<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="read_more">Continue lendo &raquo;</a>
+				<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="read_more">Continue lendo &nbsp;<i class="fas fa-angle-double-right"></i></a>
 				<?php } ?>
 
 			</div>
 		</div>
 		<div>
-			<a href="/blogSiteArtigos" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Veja todos os artigos<span> >></span></a>
+			<a href="/blogSiteArtigos" style="text-transform: uppercase; font-weight: bold; color: #36648b"><i class="fas fa-angle-double-left"></i>&nbsp;Veja todos os artigos&nbsp;<i class="fas fa-angle-double-right"></i></a>
+			<!-- <a href="/blogSiteArtigos" style="text-transform: uppercase; font-weight: bold; color: #36648b"><span><< </span>Veja todos os artigos<span> >></span></a> -->
 			<!-- <a href="/blogSiteArtigos" class="btn btn-primary">Veja todos artigos</a> -->
 		</div>
 	</div>
@@ -267,7 +268,7 @@
 				</table>
 
 				<div class="clique text-center">
-					<p style="color: #36648b">Clique na foto para ampliar</p>
+					<p style="color: #36648b">Clique na foto para ampliar&nbsp;<i class="fa fa-search-plus"></i></p>
 				</div>
 
 			</div>
@@ -287,7 +288,7 @@
 		</div> -->
 
 		<div class="btn-gallery">
-			<a href="/gallery" class="read_more">Veja mais fotos &raquo;</a>
+			<a href="/gallery" class="read_more">Veja mais fotos&nbsp;<i class="fas fa-angle-double-right"></i></a>
 		</div>	
 
 	</div> <!-- FIM SIDEBAR FOTOS -->

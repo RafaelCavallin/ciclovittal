@@ -13,6 +13,9 @@ html, body {
 	overflow-x: hidden;
 }
 header {
+	background-image: url('/res/site/images/bkgcirclesALPHA.png');
+	background-repeat: no-repeat;
+	/* opacity: 0.5; */
 	width: 100%;
 	height: 150px;
 	background-color: rgba(44, 110, 151, .9);
@@ -99,6 +102,9 @@ header #logotipo {
 	border-style: none;
 	border-radius: 100px;
 	transition: all 0.3s linear;
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+    box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
 }
 #banner {
 	width: 100%;
@@ -146,11 +152,12 @@ header #logotipo {
 	display: block;
 	padding-left: 20px;
 	background-color:#ccc8c8;
-	background-clip: content-box;
+	/* background-clip: content-box; */
 	width: 375px;
 	height: 175px;
 	transition: all 0.3s linear;
 	border-radius: 50px;
+	margin-right: 20px;
 }
 #cursos .text-center {
 	margin-top: 48px;
@@ -224,6 +231,9 @@ header #logotipo {
 }
 #cursos .col-xs-4:hover {
 	background-color: #36648B;
+	-webkit-box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow:    9px 7px 5px rgba(0, 0, 0, 0.55);
+    box-shadow:         9px 7px 5px rgba(0, 0, 0, 0.55);
 }
 .circle01.container {
 	background-color: #c2d0dc;
@@ -409,7 +419,7 @@ header #logotipo {
 	background: #36648B;
 	color: #fff;
 	text-shadow: 0 0 8px #fff;
-	letter-spacing: 1.0px;
+	letter-spacing: 0.5px;
 	text-decoration: none;
 	transition: all 0.2s linear;
 }
@@ -469,7 +479,7 @@ header #logotipo {
 	background: #36648B;
 	color: #fff;
 	text-shadow: 0 0 8px #fff;
-	letter-spacing: 1.0px;
+	letter-spacing: 0.5px;
 	text-decoration: none;
 	transition: all 0.2s linear;
 }
@@ -500,7 +510,6 @@ header #logotipo {
 	text-decoration: none;
 }
 footer {
-
 	margin-top: 90px;
 }
 footer .row {
@@ -514,6 +523,9 @@ footer .row p {
 footer .row-cinza-claro {
 	height: 200px;
 	background-color: #36648B;
+	background-image: url('/res/site/images/bkgcirclesALPHA.png');
+	background-repeat: no-repeat;
+	/* opacity: 0.5; */
 }
 footer .row-cinza-claro .container .row {
 	margin-left: 10px;
@@ -763,7 +775,7 @@ footer .scroolTop .btnTop button#page-up i {
 	height: 50px;
 	width: 50px;
     position: fixed;
-    bottom: 16px;
+    bottom: 270px;
     right: 30px;
     z-index: 9999;
     border: none;

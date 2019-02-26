@@ -26,7 +26,7 @@
 										<?php $counter1=-1;  if( isset($articles) && ( is_array($articles) || $articles instanceof Traversable ) && sizeof($articles) ) foreach( $articles as $key1 => $value1 ){ $counter1++; ?>
 
 										<a href="/blogSite/<?php echo htmlspecialchars( $value1["idpost"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
-											<h5><?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
+											<h5><i class="fas fa-angle-double-right"></i>&nbsp;<?php echo htmlspecialchars( $value1["title"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
 											<time><?php echo formatDate($value1["created"]); ?></time>
 										</a>
 										<?php } ?>
@@ -40,11 +40,11 @@
 								<h4>LINKS</h4>
 
 								<ul class="list-unstyled">
-									<li><a href="index.php"><i class="fa fa-angle-right"></i> Home</a></li>
-									<li><a href="#cursos"><i class="fa fa-angle-right"></i> Cursos</a></li>
-									<li><a href="#sobre"><i class="fa fa-angle-right"></i> Sobre Nós</a></li>
-									<li><a href="#blog"><i class="fa fa-angle-right"></i> Blog</a></li>
-									<li><a href="/gallery"><i class="fa fa-angle-right"></i> Galeria</a></li>
+									<li><a href="index.php"><i class="fas fa-angle-double-right"></i>&nbsp;Home</a></li>
+									<li><a href="#cursos"><i class="fas fa-angle-double-right"></i>&nbsp;Cursos</a></li>
+									<li><a href="#sobre"><i class="fas fa-angle-double-right"></i>&nbsp;Sobre Nós</a></li>
+									<li><a href="#blog"><i class="fas fa-angle-double-right"></i>&nbsp;Blog</a></li>
+									<li><a href="/gallery"><i class="fas fa-angle-double-right"></i>&nbsp;Galeria</a></li>
 								</ul>
 
 							</div>
