@@ -41,12 +41,12 @@
                                     Arial; padding: 10px 15px; background:
                                     #fff;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
-                                       0; font-family: Arial;">
+                                       0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td style="border-collapse: collapse;">
                                                 <h2><a style="display: inline-block; text-decoration:
-                                                   none; box-sizing: border-box; font-family: arial;
+                                                   none; box-sizing: border-box; font-family: verdana;
                                                    width: 100%; text-align: center; color:
                                                    rgb(102,102,102); font-size: 16px; cursor: text;" target="_blank"><span style="font-weight: normal;
                                                    color: #666;">Essa informação aparece ao lado do
@@ -61,17 +61,17 @@
                               </tr>
                            </tbody>
                         </table> -->
-                        <table style="border-collapse: collapse;
+                        <!-- <table style="border-collapse: collapse;
                            border-spacing: 0; box-sizing: border-box;
                            min-height: 40px; position: relative; width:
                            100%;">
                            <tbody>
                               <tr>
                                  <td style="border-collapse:
-                                    collapse; font-family: Arial; padding: 10px
+                                    collapse; font-family: verdana; padding: 10px
                                     15px;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
-                                       0; font-family: Arial;">
+                                       0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td style="border-collapse: collapse;">
@@ -85,29 +85,29 @@
                                  </td>
                               </tr>
                            </tbody>
-                        </table>
+                        </table> -->
                         <table style="border-collapse: collapse;
                            border-spacing: 0; box-sizing: border-box;
                            min-height: 40px; position: relative; width: 100%;
-                           font-family: Arial; font-size: 25px;
+                           font-family: verdana; font-size: 25px;
                            padding-bottom: 20px; padding-top: 20px;
                            text-align: center; vertical-align:
-                           middle;">
+                           middle; background-color: rgb(54,100,139)">
                            <tbody>
                               <tr>
                                  <td style="border-collapse: collapse; font-family:
                                     Arial; padding: 10px 15px;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
-                                       0; font-family: Arial;">
+                                       0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td style="border-collapse: collapse;">
                                                 <h2 style="font-weight: bold; margin: 0px; padding:
                                                    0px; color: #36648b; word-wrap: break-word;"><a style="display: inline-block; text-decoration:
-                                                   none; box-sizing: border-box; font-family: arial;
-                                                   width: 100%; font-size: 25px; text-align: center;
+                                                   none; box-sizing: border-box; font-family: verdana;
+                                                   width: 100%; font-size: 20px; text-align: center;
                                                    word-wrap: break-word; color: rgb(54,100,139);" target="_blank"><span style="font-size: inherit;
-                                                   text-align: center; width: 100%; color: #36648b;">Recuperação de senha</span></a>
+                                                   text-align: center; width: 100%; color: #fff;">Recuperação de senha</span></a>
                                                 </h2>
                                              </td>
                                           </tr>
@@ -117,7 +117,7 @@
                               </tr>
                            </tbody>
                         </table>
-                        <table style="border-collapse: collapse;
+                        <!-- <table style="border-collapse: collapse;
                            border-spacing: 0; box-sizing: border-box;
                            min-height: 40px; position: relative; width: 100%;
                            display: table;">
@@ -126,7 +126,7 @@
                                  <td style="border-collapse: collapse; font-family:
                                     Arial; padding: 10px 15px;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
-                                       0; font-family: Arial;">
+                                       0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td style="border-collapse: collapse;">
@@ -140,7 +140,7 @@
                                  </td>
                               </tr>
                            </tbody>
-                        </table>
+                        </table> -->
                         <table style="border-collapse: collapse;
                            border-spacing: 0; box-sizing: border-box;
                            min-height: 40px; position: relative; width: 100%;
@@ -150,16 +150,16 @@
                            <tbody>
                               <tr>
                                  <td style="border-collapse: collapse;
-                                    font-family: Arial; padding: 0px; line-height:
+                                    font-family: verdana; padding: 0px; line-height:
                                     0px; mso-line-height-rule: exactly;">
                                     <table width="100%" style="border-collapse: collapse;
-                                       border-spacing: 0; font-family: Arial;">
+                                       border-spacing: 0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td align="center" style="border-collapse:
                                                 collapse; line-height: 0px; padding: 0;
                                                 mso-line-height-rule: exactly;"><a target="_blank" style="display: block; text-decoration: none;
-                                                box-sizing: border-box; font-family: arial; width:
+                                                box-sizing: border-box; font-family: verdana; width:
                                                 100%;"><img class="partial-image" style="box-sizing: border-box;
                                                 display: block; max-width: 600px; min-width:
                                                 160px;" src="http://i63.tinypic.com/flvakh.png"></a></td>
@@ -177,7 +177,7 @@
                            <tbody>
                               <tr>
                                  <td style="border-collapse:
-                                    collapse; font-family: Arial; padding: 10px
+                                    collapse; font-family: verdana; padding: 10px
                                     15px;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
                                        0; text-align: left; font-family:
@@ -186,7 +186,7 @@
                                           <tr>
                                              <td style="border-collapse:
                                                 collapse;">
-                                                <div style="font-family: Arial;
+                                                <div style="font-family: verdana;
                                                    font-size: 15px; font-weight: normal; line-height:
                                                    170%; text-align: left; color: #666; word-wrap:
                                                    break-word;">
@@ -218,15 +218,15 @@
                            <tbody>
                               <tr>
                                  <td style="border-collapse:
-                                    collapse; font-family: Arial; padding: 10px 15px;
+                                    collapse; font-family: verdana; padding: 10px 15px;
                                     padding-top: 20px; padding-bottom: 20px;">
-                                    <div style="font-family: Arial; text-align:
+                                    <div style="font-family: verdana; text-align:
                                        center;">
                                        <table style="border-collapse:
                                           collapse; border-spacing: 0; background-color:
                                           rgb(54,100,139); border-radius: 10px; color:
                                           rgb(255,255,255); display: inline-block;
-                                          font-family: Arial; font-size: 15px; font-weight:
+                                          font-family: verdana; font-size: 15px; font-weight:
                                           bold; text-align: center;">
                                           <tbody style="display:
                                              inline-block;">
@@ -235,7 +235,7 @@
                                                 <td align="center" style="border-collapse: collapse; display:
                                                    inline-block; padding: 15px 20px;"><a href="<?php echo htmlspecialchars( $link, ENT_COMPAT, 'UTF-8', FALSE ); ?>" target="_blank" style="display: inline-block;
                                                    text-decoration: none; box-sizing: border-box;
-                                                   font-family: arial; color: #fff; font-size: 15px;
+                                                   font-family: verdana; color: #fff; font-size: 15px;
                                                    font-weight: bold; margin: 0px; padding: 0px;
                                                    text-align: center; word-wrap: break-word; width:
                                                    100%;">Redefinir senha</a>
@@ -244,7 +244,7 @@
                                           </tbody>
                                        </table>
 
-                                       <div style="font-family: Arial;
+                                       <div style="font-family: verdana;
                                                    font-size: 15px; font-weight: normal; line-height:
                                                    170%; text-align: left; color: #666; word-wrap:
                                                    break-word;">
@@ -266,7 +266,7 @@
                                  <td style="border-collapse: collapse; font-family:
                                     Arial; padding: 10px 15px;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
-                                       0; font-family: Arial;">
+                                       0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td style="border-collapse: collapse;">
@@ -288,7 +288,7 @@
                            <tbody>
                               <tr>
                                  <td style="border-collapse:
-                                    collapse; font-family: Arial; padding: 10px 15px;
+                                    collapse; font-family: verdana; padding: 10px 15px;
                                     background-color: rgb(54,100,139);">
                                     <table width="100%" style="border-collapse: collapse;
                                        border-spacing: 0; text-align: left; font-family:
@@ -297,7 +297,7 @@
                                           <tr>
                                              <td style="border-collapse:
                                                 collapse;">
-                                                 <div style="font-family: Arial;
+                                                 <div style="font-family: verdana;
                                                    font-size: 15px; font-weight: normal; line-height:
                                                    170%; text-align: left; color: rgb(120,113,99);
                                                    word-wrap: break-word;">
@@ -327,10 +327,10 @@
                            <tbody>
                               <tr>
                                  <td style="border-collapse:
-                                    collapse; font-family: Arial; padding: 10px
+                                    collapse; font-family: verdana; padding: 10px
                                     15px;">
                                     <table width="100%" style="border-collapse: collapse; border-spacing:
-                                       0; font-family: Arial;">
+                                       0; font-family: verdana;">
                                        <tbody>
                                           <tr>
                                              <td style="border-collapse: collapse;">
@@ -347,14 +347,14 @@
                         </table>
                          <!-- <a href="http://www.facebook.com" target="_blank" style="display: inline-block;
                                                 text-decoration: none; box-sizing: border-box;
-                                                font-family: arial; width: auto!important;">          
+                                                font-family: verdana; width: auto!important;">          
                              &nbsp;             
                              <img style="height: auto; width: 30px;" dfsrc="http://imgnode1.iagentecorp.com/iagentemail/drag-drop/facebook.png" src="http://imgnode1.iagentecorp.com/iagentemail/drag-drop/facebook.png"> 
                              &nbsp;                             
                         </a>
                          <a href="http://www.twitter.com" target="_blank" style="display: inline-block;
                                                    text-decoration: none; box-sizing: border-box;
-                                                   font-family: arial; width: auto!important;">      
+                                                   font-family: verdana; width: auto!important;">      
                             &nbsp;                  
                              <img style="height: auto; width: 30px;" dfsrc="http://imgnode1.iagentecorp.com/iagentemail/drag-drop/twitter.png" src="http://imgnode1.iagentecorp.com/iagentemail/drag-drop/twitter.png">        
                             
