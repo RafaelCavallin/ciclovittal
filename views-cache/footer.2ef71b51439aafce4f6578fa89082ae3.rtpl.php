@@ -5,7 +5,7 @@
       Smart thinking, best results.
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2019-2020 <a href="#">Mekhet Desenvolvimento</a>.</strong> &nbsp;All rights reserved.
+    <strong>Copyright &copy; <a href="#">Mekhet Desenvolvimento</a>.</strong> &nbsp;All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

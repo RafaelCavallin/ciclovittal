@@ -56,7 +56,7 @@
     <a href="/admin/login">Ou entre com outra senha</a>
   </div>
   <div class="lockscreen-footer text-center">
-    Copyright &copy; 2019-2020 <b><a href="#" class="text-black">Mekhet Desenvolvimento</a></b><br>
+    Copyright &copy; <b><a href="#" class="text-black">Mekhet Desenvolvimento</a></b><br>
     All rights reserved
   </div>
 </div>

@@ -27,8 +27,8 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
+<body class="hold-transition login-page" style="overflow-y: hidden">
+<div class="login-box" style="margin-bottom: 30px">
   <div class="login-logo">
     <a href="#"><b>CicloVittal</b>ADM</a>
   </div>
@@ -78,7 +78,7 @@
 </div>
 
 <div class="container text-center">
-  <a class="btn btn-primary" href="/"><h3>Retornar ao site</h3></a>
+  <a class="btn btn-primary" href="/"><h3 style="margin-top: 10px">Retornar ao site</h3></a>
 </div>
 <!-- /.login-box -->
 
