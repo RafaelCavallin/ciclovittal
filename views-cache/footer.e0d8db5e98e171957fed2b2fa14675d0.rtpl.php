@@ -187,6 +187,19 @@
 			/*window.close();*/
 			}
 	</script>
+
+	<!-- SCRIPT MODAL -->
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		    $('#exampleModalCenter').modal('show');
+		})
+	</script>
+
+	<!-- FIM SCRIPT MODAL -->
+
+
 	
 	<!-- <script type="text/javascript">
 
