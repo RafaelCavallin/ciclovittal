@@ -190,12 +190,12 @@
 
 	<!-- SCRIPT MODAL -->
 
-	<script type="text/javascript">
-
-		$(document).ready(function() {
-		    $('#exampleModalCenter').modal('show');
-		})
-	</script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function()
+		{
+		$("#meumodal").modal("show");
+		});
+	</script> -->
 
 	<!-- FIM SCRIPT MODAL -->
 
