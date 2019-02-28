@@ -107,6 +107,7 @@
 	</footer>
 	
 	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery-cookie/src/jquery.cookie.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 	<script src="/res/site/js/efeitos.js"></script>
@@ -188,12 +189,20 @@
 
 	<!-- SCRIPT MODAL -->
 
-	<!-- <script type="text/javascript">
-		$(document).ready(function()
-		{
-		$("#meumodal").modal("show");
-		});
-	</script> -->
+	<script type="text/javascript">
+
+		var cookieAlert = $.cookie("alert"); // salva o valor do cookie na variável
+		if (cookieAlert !== '1') { // verifica se o valor do cookie é != 1. Caso for, significa que não foi setado
+		    alert('Este site foi desenvolvido para melhor visualização no navegador Google Chrome. Caso já esteja utilizando o Chrome, por favor, atualize a sua versão. Obrigado!');
+		    $.cookie("alert", 1, {expires: 1}); // seta o cookie 'alert' com o valor '1' e expira em '1' dia
+
+		    /*$(document).ready(function()
+				{
+				$("#meumodal").modal("show");
+			});*/
+		}
+		
+	</script>
 
 	<!-- FIM SCRIPT MODAL -->
 
